@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FontAwesome -->
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="~/content/plugins.css">
+    <link rel="stylesheet" href="~/content/style.css">
+    <link rel="stylesheet" href="~/Content/jquery.timeliny.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .w3-modal {
+            z-index: 150;
+        }
+
+        .subnav-title {
+            display: none
+        }
+
+        .suy, .subnav-item, nav-link, submenu {
+            font-family: 'McKinsey Theinhardt', 'Helvetica Neue', Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #fff;
+        }
+
+        #submenu li.nav-item {
+            width: 33.33%;
+            float: left;
+        }
+    </style>
+    @RenderSection("css", required: false)
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://taticca.com.br/assets/images/favicon.ico">
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <!-- pre-loader start -->
+    <div class="preloader">
+        <div class="preloader-num"></div>
+    </div>
+    <!-- pre-loader end -->
+    <!-- placeholder start -->
+    <div class="secondary-page-background-placeholder"></div>
+    <!-- placeholder end -->
+    <!-- cursor start -->
+    <div class="cursor">
+        <div id="cursor" class="cursor-item"></div>
+    </div>
+    <!-- cursor end -->
+    <!-- main start -->
+    <main id="swup">
+
+        <!-- to-top-button start -->
+        <a href="#firstSection" class="to-top-button click-target">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+        <!-- to-top-button end -->
+        <!-- header start -->
+        <header class="header header-white">
+            <!-- menu-icon start -->
+            <div class="menu-outer-wrap">
+                <div class="menu-wrap ">
+                    <div class="menu menu-hover click-target pull-left">
+                        <span class="menu-line-1"></span>
+                        <span class="menu-line-2"></span>
+                        <span class="menu-line-3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-box pull-left" style="left: 121px; margin-top: 1px; position: absolute;">
+                <a data-swup href="/" class="logo">
+                    <img src="~/img/logo/logo.fw.png" alt="logo" style="width: 250px;" @*width="50%"*@>
+                </a>
+            </div>
+            <!-- menu-icon end -->
+            <!-- logo start -->
+            @*<div class="logo-box text-right">
+                    <a data-swup href="/" class="logo">
+                        <img src="~/img/logo/logo.fw.png" alt="logo" width="68%">
+                    </a>
+                </div>*@
+            <!-- logo end -->
+        </header>
+        <!-- header end -->
+        <!-- menu-navigation end -->
+        <div class="menu-navigation">
+            <!-- menu-overlay start -->
+            <div class="menu-overlay click-target"></div>
+            <!-- menu-overlay end -->
+            <!-- menu-background start -->
+            <div class="menu-pre-background"></div>
+            <!-- menu-background end -->
+            <!-- menu-inner start -->
+            <div class="menu-inner">
+                <!-- menu-container start -->
+                <div class="menu-container">
+
+                    <!-- menu-header start -->
+                    <div class="menu-header" style="margin-top:15px">
+                        @*<h4>Navegação</h4>*@
+                    </div>
+                    <!-- menu-header end -->
+
+                    <div class="row">
+                        <!-- navigation start -->
+                        <nav class="navigation col-md-12" id="principalmenu">
+                            <ul class="navigation-list">
+                                @*<li class="navigation-item" style="margin-top:57px">
+                                    <a class="nav-link suy" data-swup href="/">Início</a>
+                                </li>*@
+                                <li class="navigation-item" style="margin-top:80px">
+                                    <a class="nav-link suy">
+                                        Sobre Nós
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+
+                                    <div class="subnav">
+                                        <ul class="subnav-list">
+                                            <li class="subnav-item">
+                                                <a class="subnav-title">
+                                                    <i class="fa fa-arrow-left"></i>
+                                                    Sobre a TATICCA Allinial Global
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/sobrenos">Sobre Nós </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
+                                                    Conheça nossos executivos
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Encontre nossos escritórios
+
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Visite nossa sala de impressa e mídias
+
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Registre-se em nosso programa Alumni
+
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="navigation-item">
+                                    <a class="nav-link suy">
+                                        Nossos Serviços
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+
+                                    <div class="subnav">
+                                        <ul class="subnav-list">
+                                            <li class="subnav-item">
+                                                <a class="subnav-title">
+                                                    <i class="fa fa-arrow-left"></i>
+                                                    Nossos Serviços
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("index", "Servico")">Serviços</a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("AuditoriaInternaEExterna", "Servico")">
+                                                    Auditoria Interna e Externa
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("CORPORATEFINANCE", "Servico")">
+                                                    Corporate Finance
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("OUTSOURCING", "Servico")">
+                                                    OutSorcing
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("RISKADVISORY", "Servico")">
+                                                    Risk Advisory
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("STRATEGYOPERATIONSADVISORY", "Servico")">
+                                                    Strategy Operation Advisory
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("Tax", "Servico")">
+                                                    Tax
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("TECHNOLOGY", "Servico")">
+                                                    Technology
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("TRAINING", "Servico")">
+                                                    Training
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="navigation-item">
+                                    <a class="nav-link suy">
+                                        O que oferecemos por setor
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+
+                                    <div class="subnav">
+                                        <ul class="subnav-list">
+                                            <li class="subnav-item">
+                                                <a class="subnav-title">
+                                                    <i class="fa fa-arrow-left"></i>
+                                                    Automotivo
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
+                                                    Energia e serviços de utilidade pública
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    German Desk
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Healthcare
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Varejo e consumo
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Private Equity
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Serviços financeiros
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Tecnologia e Softwares
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Turismo e lazer
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Infraestrutura (Rodovias e Portos) e grandes projetos
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="navigation-item">
+                                    <a class="nav-link suy" data-swup href="/Contato">Análises e estudos </a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a class="nav-link suy" data-swup href="/Contato">Carreira na TATICCA</a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a class="nav-link suy" data-swup href="/Contato">Encontre nossos escritórios </a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a class="nav-link suy" data-swup href="/Contato">Solicite sua proposta </a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a class="nav-link suy" data-swup href="/Contato">
+                                        Fale Conosco 
+                                    </a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a class="nav-link suy" data-swup href="/Contato">
+                                        Área do Cliente 
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- navigation end -->
+
+                        <div id="submenu" style="position: absolute;left: 30vw;top: 100px; top: 100px; width: 65vw;">
+                            <h2></h2>
+                            <ul class="navigation-list"></ul>
+                        </div>
+                    </div>
+                    <!-- social start -->
+                    @*<div class="social social-navigation">
+                        <div class="social-item">
+                            <a class="text-white" href="/#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a class="text-white" href="/#">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a class="text-white" href="/#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>*@
+                    <!-- social end -->
+
+                </div>
+                <!-- menu-container end -->
+            </div>
+            <!-- menu-inner end -->
+        </div>
+        <!-- menu-navigation end -->
+
+        @RenderBody()
+    </main>
+    <!-- main end -->
+    <!-- footer start -->
+    <footer class="footer bg-black">
+        <div class="container">
+            <div class="row justify-content-md-between justify-content-sm-center">
+
+                <div class="col-lg-4 col-md-6 col-sm-10">
+                    <div class="footer-item text-md-left text-center">
+                        <a data-swup href="/" class="logo slide-up">
+                            <img src="~/img/logo/branco.fw.png" alt="logo" width="100%">
+                        </a>
+                        <div class="footer-content">
+                            <p class="footer-text text-light-gray slide-up delay-1">
+                                Feugiat nibh sed pulvinar proin gravida lectus.
+                                In est ante in nibh. Vitae congue mauris rhoncus vel elit. Lectus mauris ultrices eros in cursus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-10">
+                    <div class="footer-item text-md-right text-center">
+                        <h3 class="footer-title text-white slide-up">Contatos</h3>
+                        <ul class="footer-content">
+                            <li class="text-light-gray slide-up delay-1">taticca@taticca.com.br</li>
+                            <li class="text-light-gray slide-up delay-1">+ 55 11 3062 3000</li>
+                            <li class="text-light-gray slide-up delay-1">
+                                1910 Gateway Road, Portland, Oregon 97230
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row justify-content-between footer-bottom slide-up delay-1">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        <p class="text-white slide-up">2019 @@ TATICCA. All rights reserved</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="footer-social social slide-up">
+                        <div class="social-item">
+                            <a class="text-white" href="/#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a class="text-white" href="/#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a class="text-white" href="/#">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                        </div>
+                        <div class="social-item">
+                            <a class="text-white" href="/#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- footer end -->
+    <!-- JavaScript -->
+    <script src="~/scripts/plugins.js"></script>
+    <script src="~/scripts/main.js"></script>
+    <!--JS de Código de história-->
+    <!-- Vendors JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Plugin JS -->
+    <script src="~/Scripts/jquery.timeliny.min.js"></script>
+    <!-- Basic example -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js"></script>
+    <script>
+        var visible = true;
+        var logo = false
+
+        $(function () {
+
+            $('.click-target').click(function () {
+                $('.logo-box').fadeToggle();
+                $('.header').append('<div class="logo-box pull-left" style="margin-left: 50px; margin-top: 1px; position: absolute;"><img src="/img/logo/taticca-branco.png" alt="logo" style="width: 200px;"></a></div >')
+            });
+
+            $('#principalmenu a').mouseover(function () {
+                if ($(this).parent().find('.subnav-list').length == 0) {
+                    $('#submenu h2').text('');
+                    $('#submenu ul').fadeOut('fast');
+                }
+                else {
+                    $('#submenu h2').text($(this).text());
+
+                    $('#submenu ul').hide().fadeIn('fast');
+                    $('#submenu ul').html($(this).parent().find('.subnav-list').html());
+                    $('#submenu ul .subnav-item').attr('class', 'nav-item');
+                    $('#submenu ul .subnav-title').attr('style', 'font-size:32px');
+                    $('#submenu ul .nav-item a').attr('style', 'padding:10px;font-family: \'McKinsey Theinhardt\', \'Helvetica Neue\', Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif; font- size: 1.125rem; font - weight: 300; position: relative; cursor: pointer; word -break: break-word; color: #000; display: block; margin: 16px 0px 16px 0px; padding: 0 24px 0 0');
+                    $('#submenu ul li:eq(0)').remove();
+                }
+                //teste = $(this);
+            });
+
+
+            $('.popover').mouseenter(function () {
+                $('#section-subheadingdynamic').hide().text($(this).attr('data-content'));
+
+                var topatual = 'top: ' + $('#section-subheadingdynamic').attr('data-top') + '%';
+                var leftatual = 'left: ' + $('#section-subheadingdynamic').attr('data-left') + '%';
+                var styleatual = $('#section-subheadingdynamic').attr('style');
+
+                var topatualizado = parseFloat($(this).attr('data-top')) - 4;
+                var leftatualizado = $(this).attr('data-left');
+
+                styleatual = styleatual.replace(topatual, 'top: ' + topatualizado + '%');
+                styleatual = styleatual.replace(leftatual, 'left: ' + leftatualizado + '%');
+
+                $('#section-subheadingdynamic').attr('style', styleatual)
+                    .attr('data-top', topatualizado)
+                    .attr('data-left', leftatualizado).fadeIn('fast');
+            });
+            $('#demo1').timeliny({
+                hideBlankYears: true
+            });
+        });
+    </script>
+    @RenderSection("js", required: false)
+
+    <script>
+        $(function () {
+            ReloadPlugins();
+        })
+
+        function ReloadPlugins() {
+            if (window.location.pathname.toLowerCase() != localStorage["paginareferencia"]) {
+                window.location.reload();
+            } localStorage["paginareferencia"] = window.location.pathname.toLowerCase();
+
+            setTimeout(function () {
+                ReloadPlugins();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

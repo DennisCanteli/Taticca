@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Contato | Taticca";
+}
+
+<!-- contact page intro start -->
+<!-- MANINHO, A CLASSE overlay-black DEIXA A IMAGEM + ESCURA, SE QUISER IGUAL A ORIGINAL REMOVA ESSA CLASSE -->
+<section id="firstSection" class="work-header section-img-100vh">
+    <div class="bg-fixed overlay-black bg-image lazy" data-bg="url(/img/banners/3.jpg)">
+        <div class="work-header-content">
+            <h2 class="work-header-title text-white">
+                <span class="slide-over">Contato São Paulo</span>
+            </h2>
+            <p class='page-header-text text-lead text-white'>
+                <span class="slide-over">This an introduction text. There are many variations of passages of Lorem Ipsum available, but the majority have always free from rep - etition</span>
+            </p>
+            <br />
+            <br />
+            <br />
+            <br />
+            <p class='page-header-text text-lead text-white text-center'>
+                <span class="slide-over">
+                    <a href="/contato" class="link text-white inline">São Paulo</a>
+                    <a href="/contato/curitiba" class="link text-white inline">Curitiba</a>
+                    <a href="/contato/porto" class="link text-white inline">Porto Alegre</a>
+                    <a href="/contato/blumenau" class="link text-white inline">Blumenau</a>
+                    <a href="/contato/belo" class="link text-white inline">Belo Horizonte</a>
+                    <a href="/contato/brasilia" class="link text-white inline">Brasília</a>
+                    <a href="/contato/rio" class="link text-white inline">Rio de Janeiro</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- contact page intro end -->
+<!-- contact page main start -->
+<div class="page-main">
+
+    <!-- section start -->
+    <section class="section-medium section-80vh bg-light">
+        <!-- container start -->
+        <div class="container">
+            <!-- row start -->
+            <div class="row justify-content-center">
+
+                <div class="col-12">
+                    <div class="section-title section-title-small text-center">
+                        <h2 class="slide-up">Informações de Contato</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-item slide-up">
+                        <div class="contact-icon">
+                            <i class="fa fa-map"></i>
+                        </div>
+                        <h3 class="contact-title">Endereço</h3>
+                        <p class="contact-text">
+                            R. Dr. Geraldo Campos Moreira, 375 - Sala 51 - Brooklin Novo, São Paulo
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-item slide-up delay-1">
+                        <div class="contact-icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <h3 class="contact-title">Telefone</h3>
+                        <p class="contact-text">+55 11 3062 3000</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-item slide-up delay-2">
+                        <div class="contact-icon">
+                            <i class="fa fa-envelope-open"></i>
+                        </div>
+                        <h3 class="contact-title">Email</h3>
+                        <a href="contact.html#" class="contact-text link text-black">taticca@taticca.com.br</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row end -->
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+    <!-- section start -->
+    <section class="section-large section-100vh overlay-black bg-image lazy" data-bg="url(img/Contact/1.jpg)">
+        <!-- container start -->
+        <div class="container">
+            <!-- row start -->
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+                    <div class="section-title section-title-small text-center">
+                        <h2 class="text-white slide-up">Entre em contato</h2>
+                    </div>
+
+                    <!-- form start -->
+                    <form class="form-light contact-message row" id="form" method="POST" action="http://mikhailmasterov.com/contact.php">
+                        <div class="form-group col-md-6">
+                            <input class="slide-up delay-1" id="username" type="text" name="username" placeholder="Digite seu nome">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input class="slide-up delay-1" id="email" type="email" name="email" placeholder="Digite seu Email">
+                        </div>
+                        <div class="form-group col-12">
+                            <textarea class="slide-up delay-2" id="message" placeholder="Mensagem" name="message" rows="3"></textarea>
+                        </div>
+                        <div class="col-12 text-center slide-up delay-3">
+                            <button class="btn btn-outline-white text-white" id="submit" type="submit" name="submit">enviar mensagem</button>
+                        </div>
+                    </form>
+                    <!-- form end -->
+
+                    <div class="output-message-outer">
+                        <div class="output-message text-center alert">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row end -->
+        </div>
+        <!-- container end -->
+    </section>
+    <!-- section end -->
+
+</div>
+<!-- contact page main end -->
