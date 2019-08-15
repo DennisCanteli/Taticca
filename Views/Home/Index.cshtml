@@ -2,556 +2,860 @@
     ViewBag.Title = "Início | Tattica";
 }
 
-<!-- slider start -->
+@section css{
+    <link href="~/Content/styles-banner.css" rel="stylesheet" />
+    <script charset="utf-8" src="~/Scripts/vendor-gsap.js"></script>
+    <script charset="utf-8" src="~/Scripts/SectionalScroll.js"></script>
+    
+    <!-- essencial remote version
+    <link rel="stylesheet" href="https://www.mckinsey.com/redesign/resources/css/styles-6bb422.css">
+    <script charset="utf-8" src="https://www.mckinsey.com/redesign/resources/js/vendor-gsap.part.dee3187dfa7be186545a.js"></script>
+    <script charset="utf-8" src="https://www.mckinsey.com/redesign/resources/js/SectionalScroll.part.99107acddb4510c92f6e.js"></script> -->
+}
+
 @section js{
+    <script src="~/Scripts/runtime.js"></script>
+    <script src="~/Scripts/shared.js"></script>
+    <script src="~/Scripts/app.js"></script>
+
     <script>
         $(function () {
-            //$('.section-large, .section-img-100vh, footer').hide();
-            $(document).scroll(function () {
-                if ($(document).scrollTop() == 0 && !visible) {
-                    //$('.section-large, .section-img-100vh, footer').hide();
-                    $('#firstSection, header').hide().fadeIn('slow');
-                    $('html, body').animate({
-                        scrollTop: 0
-                    }, 200);
-
-                    visible = true;
-                }
-
-                if ($(document).scrollTop() > 0 && visible) {
-                    $('#firstSection, header').hide(3000);
-                    $('.section-large, .section-img-100vh[id!="firstSection"], footer').hide().fadeIn('slow');
-                    $('html, body').animate({
-                        scrollTop: 100
-                    }, 200);
-                    setTimeout(function () {
-                        visible = false;
-                    }, 600);
-                }
-            });
+            $('.fp-tableCell').attr('style', 'height:' + $(window).height() + 'px');
         })
     </script>
-    }
 
-<section  id="firstSection" class="swiper-container slider-main slider-main-reveal bg-black">
-    <!-- swiper-wrapper start -->
-    <div class="swiper-wrapper">
+    <!-- essencial remote version
+    <script src="https://www.mckinsey.com/redesign/resources/js/runtime.95216eeb571c3c1eff92.js"></script>
+    <script src="https://www.mckinsey.com/redesign/resources/js/shared.part.19b7d29ebfbf9d90a993.js"></script>
+    <script src="https://www.mckinsey.com/redesign/resources/js/app.part.c1cb0d2b3c93e9ccd195.js"></script> -->
+    
+    <!-- efeito fail de scroll que ficou "AGRESSIVO"
+        <script>
+            $(function () {
+                //$('.section-large, .section-img-100vh, footer').hide();
+                $(document).scroll(function () {
+                    if ($(document).scrollTop() == 0 && !visible) {
+                        //$('.section-large, .section-img-100vh, footer').hide();
+                        $('#firstSection, header').hide().fadeIn('slow');
+                        $('html, body').animate({
+                            scrollTop: 0
+                        }, 200);
 
-        <!-- swiper-slide start -->
-        <div class="swiper-slide slider-slide">
-            <!-- slide content start -->
-            <div class="slider-inner overlay-black bg-image lazy"
-                 data-bg="url(/img/banners/1.jpg)"
-                 data-swiper-parallax="1000" style="background-color:white">
+                        visible = true;
+                    }
 
-                <!-- container start -->
-                <div class="container">
-                    <!-- row start -->
-                    <div class="row">
+                    if ($(document).scrollTop() > 0 && visible) {
+                        $('#firstSection, header').hide();
+                        $('.section-large, .section-img-100vh[id!="firstSection"], footer').hide().fadeIn('slow');
+                        $('html, body').animate({
+                            scrollTop: 100
+                        }, 200);
+                        setTimeout(function () {
+                            visible = false;
+                        }, 600);
+                    }
+                });
+            })
+        </script>-->
+}
 
-                        <div class="col-xl-7 col-lg-8">
-                            <div class="slide-content slide-content-light slide-content-intro">
-                                <p class="slide-subtitle">
-                                    <span>Saiba como</span>
-                                    <a href="#" id="example" rel="popover"
-                                       data-content="<div>This <b>is</b> your div content</div>"
-                                       data-html="true" data-original-title="A Title"></a>
-                                </p>
-                                <h1 class="slide-title">
-                                    <span>automatizar até 75%</span>
-                                </h1>
-                                <p class="slide-text text-lead">
-                                    <span>
-                                        das tarefas com RPA!
-
-                                    </span>
-                                </p>
-
-                                <!-- slider-nav start -->
-                                <div class="slider-nav-outer">
-                                    <div class="slider-nav slider-nav-intro">
-                                        <div class="btn-prev circle circle-left click-target">
-                                            <div class="half-left">
-                                                <div class="item"></div>
-                                            </div>
-
-                                            <i class="fa fa-arrow-left"></i>
-
-                                            <div class="half-right">
-                                                <div class="item"></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="btn-next circle circle-right click-target">
-                                            <div class="half-right">
-                                                <div class="item"></div>
-                                            </div>
-
-                                            <i class="fa fa-arrow-right"></i>
-
-                                            <div class="half-left">
-                                                <div class="item"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- slider-nav end -->
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- row end -->
-                </div>
-                <!-- container end -->
-            </div>
-            <!-- slide content end -->
-        </div>
-        <!-- swiper-slide end -->
-        <!-- swiper-slide start -->
-        <div class="swiper-slide slider-slide">
-            <!-- slide content start -->
-            <div class="slider-inner overlay-black bg-image lazy"
-                 data-bg="url(/img/banners/3.jpg)"
-                 data-swiper-parallax="1000">
-
-                <!-- container start -->
-                <div class="container">
-                    <!-- row start -->
-                    <div class="row">
-
-                        <div class="col-xl-7 col-lg-8">
-                            <div class="slide-content slide-content-light slide-content-second">
-                                <p class="slide-subtitle">
-                                    <span>suspendisse potenti nullam</span>
-                                </p>
-                                <h1 class="slide-title">
-                                    <span>Dictum fusce</span>
-                                </h1>
-                                <p class="slide-text text-lead">
-                                    <span>
-                                        Faucibus vitae aliquet nec ullamcorper sit amet. Nec sagittis aliquam arcu vitae elementum curabitur.
-                                        Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum.
-                                    </span>
-                                </p>
-
-                                <!-- slider-nav start -->
-                                <div class="slider-nav-outer">
-                                    <div class="slider-nav slider-nav-visible">
-                                        <div class="btn-prev circle circle-left click-target">
-                                            <div class="half-left">
-                                                <div class="item"></div>
-                                            </div>
-
-                                            <i class="fa fa-arrow-left"></i>
-
-                                            <div class="half-right">
-                                                <div class="item"></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="btn-next circle circle-right click-target">
-                                            <div class="half-right">
-                                                <div class="item"></div>
-                                            </div>
-
-                                            <i class="fa fa-arrow-right"></i>
-
-                                            <div class="half-left">
-                                                <div class="item"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- slider-nav end -->
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- row end -->
-                </div>
-                <!-- container end -->
-            </div>
-            <!-- slide content end -->
-        </div>
-        <!-- swiper-slide end -->
-        <!-- swiper-slide start -->
-        <div class="swiper-slide slider-slide">
-            <!-- slide content start -->
-            <div class="slider-inner overlay-black bg-image lazy"
-                 data-bg="url(/img/banners/2.jpg)"
-                 data-swiper-parallax="1000">
-
-                <!-- container start -->
-                <div class="container">
-                    <!-- row start -->
-                    <div class="row">
-
-                        <div class="col-xl-7 col-lg-8">
-                            <div class="slide-content slide-content-light slide-content-second">
-                                <p class="slide-subtitle">
-                                    <span>tellus in metus</span>
-                                </p>
-                                <h1 class="slide-title">
-                                    <span>elit mauris</span>
-                                </h1>
-                                <p class="slide-text text-lead">
-                                    <span>
-                                        Odio ut enim blandit volutpat maecenas volutpat. Cursus mattis molestie a iaculis at erat pellentesque.
-                                        Diam sollicitudin tempor id eu nisl. Urna id volutpat lacus laoreet non.
-                                    </span>
-                                </p>
-
-                                <!-- slider-nav start -->
-                                <div class="slider-nav-outer">
-                                    <div class="slider-nav slider-nav-visible">
-                                        <div class="btn-prev circle circle-left click-target">
-                                            <div class="half-left">
-                                                <div class="item"></div>
-                                            </div>
-
-                                            <i class="fa fa-arrow-left"></i>
-
-                                            <div class="half-right">
-                                                <div class="item"></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="btn-next circle circle-right click-target">
-                                            <div class="half-right">
-                                                <div class="item"></div>
-                                            </div>
-
-                                            <i class="fa fa-arrow-right"></i>
-
-                                            <div class="half-left">
-                                                <div class="item"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- slider-nav end -->
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- row end -->
-                </div>
-                <!-- container end -->
-            </div>
-            <!-- slide content end -->
-        </div>
-        <!-- swiper-slide end -->
-        <!-- swiper-slide start -->
-        <div class="swiper-slide slider-slide">
-            <!-- slide content start -->
-            <div class="slider-inner overlay-black bg-image lazy"
-                 data-bg="url(/img/banners/4.jpg)"
-                 data-swiper-parallax="1000">
-
-                <!-- container start -->
-                <div class="container">
-                    <!-- row start -->
-                    <div class="row">
-
-                        <div class="col-xl-7 col-lg-8">
-                            <div class="slide-content slide-content-light slide-content-second">
-                                <p class="slide-subtitle">
-                                    <span>eget nunc lobortis</span>
-                                </p>
-                                <h1 class="slide-title">
-                                    <span>Consequat mauris</span>
-                                </h1>
-                                <p class="slide-text text-lead">
-                                    <span>
-                                        Quam quisque id elementum pulvinar. Nulla aliquet enim tortor at auctor urna. Dui accumsan sit
-                                        amet morbi tempus. Tempor commodo ullamcorper a lacus vestibulum arcu non odio.
-                                    </span>
-                                </p>
-
-                                <!-- slider-nav start -->
-                                <div class="slider-nav-outer">
-                                    <div class="slider-nav slider-nav-visible">
-                                        <div class="btn-prev circle circle-left click-target">
-                                            <div class="half-left">
-                                                <div class="item"></div>
-                                            </div>
-
-                                            <i class="fa fa-arrow-left"></i>
-
-                                            <div class="half-right">
-                                                <div class="item"></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="btn-next circle circle-right click-target">
-                                            <div class="half-right">
-                                                <div class="item"></div>
-                                            </div>
-
-                                            <i class="fa fa-arrow-right"></i>
-
-                                            <div class="half-left">
-                                                <div class="item"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- slider-nav end -->
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- row end -->
-                </div>
-                <!-- container end -->
-            </div>
-            <!-- slide content end -->
-        </div>
-        <!-- swiper-slide end -->
+<section id="sectionScroll" class="sectional-scroll" data-module="SectionalScroll">
+    <div class="mark">
+        <svg id="flatlinesCenter" viewBox="0 0 3200 1800" preserveAspectRatio="xMidYMid slice" data-shape="downLeftTop">
+            <path id="flatlinesCenter1" stroke="#1941e1" d="M1562.365355-3500.249328l56.322323 6910.835823" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter2" stroke="#1a43e1" d="M1492.00819-3452.783943l196.6527 6837.901708" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter3" stroke="#1b46e1" d="M1423.11768-3404.955691L1759.1497 3360.32091" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter4" stroke="#1c48e1" d="M1353.105932-3357.957109l476.671411 6693.29354" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter5" stroke="#1d4be1" d="M1282.731313-3309.491876L1899.7331 3310.867541" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter6" stroke="#1e4de1" d="M1213.85825-3262.663469l756.381102 6547.73431" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter7" stroke="#1f50e0" d="M1143.48363-3214.198237l896.71148 6474.800197" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter8" stroke="#1f52e0" d="M1074.126316-3166.7154l1037.041853 6401.866074" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter9" stroke="#2055e0" d="M1004.235958-3118.9046l1176.42117 6329.240966" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter10" stroke="#2157e0" d="M934.878642-3071.421763L2251.630187 3184.88508" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter11" stroke="#225ae0" d="M864.521478-3023.956378L2321.6034 3159.41635" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter12" stroke="#235ce0" d="M795.976376-2976.594926L2392.74663 3135.103749" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter13" stroke="#245fe0" d="M725.619212-2929.12954l1737.10063 6038.76456" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter14" stroke="#2561e0" d="M656.261897-2881.646704L2533.6929 3084.183733" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter15" stroke="#2664e0" d="M586.371538-2833.835905l2016.810322 5893.20533" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter16" stroke="#2766e0" d="M516.99677-2785.35322L2674.137467 3034.918" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter17" stroke="#2869df" d="M446.639605-2737.887835L2744.110677 3009.44926" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter18" stroke="#296bdf" d="M377.094653-2690.543835l2437.159409 5675.66305" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter19" stroke="#2a6edf" d="M307.737338-2643.060998l2577.489783 5602.728926" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter20" stroke="#2b70df" d="M237.380174-2595.595613L2955.20033 2934.19919" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter21" stroke="#2c73df" d="M168.489665-2547.767362l2857.199476 5457.169706" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter22" stroke="#2c75df" d="M98.132501-2500.301977l2997.52985 5384.235581" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter23" stroke="#2d78df" d="M28.775186-2452.81914L3166.63541 2858.482318" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter24" stroke="#2e7adf" d="M-40.769766-2405.47514l3277.54856 5239.627413" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter25" stroke="#2f7ddf" d="M-110.144535-2356.992455L3307.7344 2809.700837" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter26" stroke="#307fdf" d="M-180.5017-2309.52707l3558.209311 5093.759177" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter27" stroke="#3182de" d="M-249.392208-2261.698819L3448.19642 2759.435253" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter28" stroke="#3284de" d="M-319.749372-2214.233434l3837.919 4948.199947" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter29" stroke="#3387de" d="M-389.106687-2166.750597l3978.249373 4875.265825" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter30" stroke="#3489de" d="M-458.651639-2119.406596L3659.286075 2684.18518" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter31" stroke="#358cde" d="M-529.008803-2071.941212l4258.268091 4730.657663" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter32" stroke="#368ede" d="M-598.366118-2024.458375l4398.598464 4657.72354" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter33" stroke="#3791de" d="M-668.256476-1976.647576L3869.7213 2608.45086" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter34" stroke="#3893de" d="M-737.613791-1929.16474l4678.308153 4512.164322" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter35" stroke="#3996de" d="M-807.642994-1881.166308l4818.947544 4440.18125" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter36" stroke="#3998de" d="M-876.516058-1834.337901L4081.81081 2533.21825" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter37" stroke="#3a9bdd" d="M-946.890676-1785.872668L4151.766567 2508.74936" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter38" stroke="#3b9ddd" d="M-1015.781185-1738.044418L4222.25537 2483.952507" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter39" stroke="#3ca0dd" d="M-1086.13835-1690.579032l5378.36693 4149.0628" data-original="M-195 900h3589"></path>
+            <path id="flatlinesCenter40" stroke="#3da2dd" d="M-1155.495665-1643.096196l5518.697306 4076.128687" data-original="M-195 900h3589"></path>
+        </svg>
 
     </div>
-    <!-- swiper-wrapper end -->
-    <!-- bottom-left-links start -->
-    <div class="bottom-left-links">
-        <div class="">
-            <a class="link text-white" href="/#">Behance</a>
+
+    <div class="section-wrapper fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; top: -331px;">
+
+        <div class="hero-with-partnership-mark section -bg-white text-right vertical-centered fp-auto-height-responsive fp-section fp-table active" data-module="HeroWithPartnershipMark" data-fp-styles="height: 331px;" style="height: 331px;">
+            <div class="fp-tableCell" style="height: 331px;">
+
+                <div class="bg" style="
+    background: -webkit-linear-gradient(-45deg, #fff 60%, #F6F5FA 100%);
+    transition: opacity 0.6s ease-in-out;
+    opacity: 0.7;
+    position: absolute;
+    box-sizing: inherit;
+    z-index: 1;"></div>
+
+                <div class="mark">
+                    <svg id="downRightCenter" viewBox="0 0 3200 1800" preserveAspectRatio="xMidYMid slice">
+                        <path id="downRightCenter1" stroke="#1941e1" d="M1224.063022-794.90973l643.440314 2703.357983"></path>
+                        <path id="downRightCenter2" stroke="#1a43e1" d="M1279.787042-778.94415l513.634407 2683.109622"></path>
+                        <path id="downRightCenter3" stroke="#1b46e1" d="M1335.536164-763.214196l383.885165 2663.36928"></path>
+                        <path id="downRightCenter4" stroke="#1c48e1" d="M1391.478759-747.3521l253.787967 2643.257532"></path>
+                        <path id="downRightCenter5" stroke="#1d4be1" d="M1447.149558-731.406955l124.195371 2623.08681"></path>
+                        <path id="downRightCenter6" stroke="#1e4de1" d="M1503.092751-715.543578l-5.902767 2602.974719"></path>
+                        <path id="downRightCenter7" stroke="#1f50e0" d="M1558.816173-699.57928l-135.709015 2582.727298"></path>
+                        <path id="downRightCenter8" stroke="#1f52e0" d="M1614.707085-683.735995l-265.594782 2562.692503"></path>
+                        <path id="downRightCenter9" stroke="#2055e0" d="M1670.50789-667.987229l-395.554515 2542.875548"></path>
+                        <path id="downRightCenter10" stroke="#2157e0" d="M1726.340317-651.983257l-525.362644 2522.627443"></path>
+                        <path id="downRightCenter11" stroke="#225ae0" d="M1782.122566-636.180586L1126.87629 1866.414968"></path>
+                        <path id="downRightCenter12" stroke="#235ce0" d="M1837.850911-620.396471l-784.914973 2482.639766"></path>
+                        <path id="downRightCenter13" stroke="#245fe0" d="M1893.73596-604.373346L978.799549 1857.940677"></path>
+                        <path id="downRightCenter14" stroke="#2561e0" d="M1949.464903-588.587949L904.859538 1853.768065"></path>
+                        <path id="downRightCenter15" stroke="#2664e0" d="M2005.369448-572.618386L830.664663 1849.626134"></path>
+                        <path id="downRightCenter16" stroke="#2766e0" d="M2061.151355-556.814776L756.562341 1845.396574"></path>
+                        <path id="downRightCenter17" stroke="#2869df" d="M2117.04167-540.972773L682.568084 1841.206345"></path>
+                        <path id="downRightCenter18" stroke="#296bdf" d="M2172.76569-525.007193L608.486538 1836.922625"></path>
+                        <path id="downRightCenter19" stroke="#2a6edf" d="M2228.655064-509.165532L534.491342 1832.732054"></path>
+                        <path id="downRightCenter20" stroke="#2b70df" d="M2284.457406-493.415142L460.331474 1828.663523"></path>
+                        <path id="downRightCenter21" stroke="#2c73df" d="M2340.288893-477.411512L386.356712 1824.419733"></path>
+                        <path id="downRightCenter22" stroke="#2c75df" d="M2396.07174-461.60756L312.255671 1820.189575"></path>
+                        <path id="downRightCenter23" stroke="#2d78df" d="M2451.853648-445.80395L238.153692 1815.959074"></path>
+                        <path id="downRightCenter24" stroke="#2e7adf" d="M2507.684793-429.79938L164.178332 1811.714002"></path>
+                        <path id="downRightCenter25" stroke="#2f7ddf" d="M2563.467042-413.99671L90.07695 1807.484785"></path>
+                        <path id="downRightCenter26" stroke="#307fdf" d="M2619.318622-398.04536L16.042762 1803.401338"></path>
+                        <path id="downRightCenter27" stroke="#3182de" d="M2675.099932-382.243031L-58.05862 1799.172119"></path>
+                        <path id="downRightCenter28" stroke="#3284de" d="M2730.990844-366.399747L-132.053475 1794.98061"></path>
+                        <path id="downRightCenter29" stroke="#3387de" d="M2786.714266-350.435449l-2992.848688 2141.13362"></path>
+                        <path id="downRightCenter30" stroke="#3489de" d="M2842.60458-334.593446l-3122.7342 2121.101047"></path>
+                        <path id="downRightCenter31" stroke="#358cde" d="M2898.405983-318.843398L-354.289487 1782.43907"></path>
+                        <path id="downRightCenter32" stroke="#368ede" d="M2954.291972-302.81993L-428.426132 1778.13423"></path>
+                        <path id="downRightCenter33" stroke="#3791de" d="M3010.019975-287.034876L-502.366827 1773.963497"></path>
+                        <path id="downRightCenter34" stroke="#3893de" d="M3065.803164-271.231863L-576.468209 1769.734279"></path>
+                        <path id="downRightCenter35" stroke="#3996de" d="M3121.63337-255.227635l-3772.076 2020.717184"></path>
+                        <path id="downRightCenter36" stroke="#3998de" d="M3177.416559-239.424623l-3901.96151 2000.684611"></path>
+                        <path id="downRightCenter37" stroke="#3a9bdd" d="M3233.26754-223.474555l-4031.845739 1980.65144"></path>
+                        <path id="downRightCenter38" stroke="#3b9ddd" d="M3289.049448-207.670945l-4161.72903 1960.618611"></path>
+                        <path id="downRightCenter39" stroke="#3ca0dd" d="M3344.993325-191.809447L-946.835123 1748.697671"></path>
+                        <path id="downRightCenter40" stroke="#3da2dd" d="M3400.663782-175.863362l-4421.421045 1920.336396"></path>
+                    </svg>
+                </div>
+
+                <div class="section-content">
+
+                    <div class="photo-render" style="background-image: url('/~/media/McKinsey/Home page/July 2 2019/RobotFrontView_highres-RGB-BT-1080x1080_v3.ashx');">
+                    </div>
+
+                    <div class="text-wrapper">
+                        <div class="text-render text-l">
+                            <div class="eyebrow">
+                            </div>
+                            <h2 class="headline">
+                                The drumbeat of digital
+                            </h2>
+                            <p class="description">
+                                Learn how pace and power go hand in hand for digital leaders
+                            </p>
+                            <a class="cta -arrow" href="#" target="" aria-label="">Read the article</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="">
-            <a class="link text-white" href="/#">FaceBook</a>
+
+        <div class="hero-with-partnership-mark section -bg-dark-blue-gradient text-left vertical-top fp-auto-height-responsive fp-section fp-table fp-completely" data-module="HeroWithPartnershipMark" data-fp-styles="height: 331px;" style="height: 331px;">
+            <div class="fp-tableCell" style="height: 331px;">
+
+                <div class="bg" style="
+    background: -webkit-linear-gradient(-45deg, #1D2844 60%, #4E556F 100%);
+    transition: opacity 0.6s ease-in-out;
+    opacity: 0.7;
+    position: absolute;
+    box-sizing: inherit;
+    z-index: 1;"></div>
+
+                <div class="mark">
+                    <svg id="downLeftTop" viewBox="0 0 3200 1800" preserveAspectRatio="xMidYMid slice">
+                        <path id="downLeftTop1" stroke="#1941e1" d="M1562.365355-3500.249328l56.322323 6910.835823"></path>
+                        <path id="downLeftTop2" stroke="#1a43e1" d="M1492.00819-3452.783943l196.6527 6837.901708"></path>
+                        <path id="downLeftTop3" stroke="#1b46e1" d="M1423.11768-3404.955691L1759.1497 3360.32091"></path>
+                        <path id="downLeftTop4" stroke="#1c48e1" d="M1353.105932-3357.957109l476.671411 6693.29354"></path>
+                        <path id="downLeftTop5" stroke="#1d4be1" d="M1282.731313-3309.491876L1899.7331 3310.867541"></path>
+                        <path id="downLeftTop6" stroke="#1e4de1" d="M1213.85825-3262.663469l756.381102 6547.73431"></path>
+                        <path id="downLeftTop7" stroke="#1f50e0" d="M1143.48363-3214.198237l896.71148 6474.800197"></path>
+                        <path id="downLeftTop8" stroke="#1f52e0" d="M1074.126316-3166.7154l1037.041853 6401.866074"></path>
+                        <path id="downLeftTop9" stroke="#2055e0" d="M1004.235958-3118.9046l1176.42117 6329.240966"></path>
+                        <path id="downLeftTop10" stroke="#2157e0" d="M934.878642-3071.421763L2251.630187 3184.88508"></path>
+                        <path id="downLeftTop11" stroke="#225ae0" d="M864.521478-3023.956378L2321.6034 3159.41635"></path>
+                        <path id="downLeftTop12" stroke="#235ce0" d="M795.976376-2976.594926L2392.74663 3135.103749"></path>
+                        <path id="downLeftTop13" stroke="#245fe0" d="M725.619212-2929.12954l1737.10063 6038.76456"></path>
+                        <path id="downLeftTop14" stroke="#2561e0" d="M656.261897-2881.646704L2533.6929 3084.183733"></path>
+                        <path id="downLeftTop15" stroke="#2664e0" d="M586.371538-2833.835905l2016.810322 5893.20533"></path>
+                        <path id="downLeftTop16" stroke="#2766e0" d="M516.99677-2785.35322L2674.137467 3034.918"></path>
+                        <path id="downLeftTop17" stroke="#2869df" d="M446.639605-2737.887835L2744.110677 3009.44926"></path>
+                        <path id="downLeftTop18" stroke="#296bdf" d="M377.094653-2690.543835l2437.159409 5675.66305"></path>
+                        <path id="downLeftTop19" stroke="#2a6edf" d="M307.737338-2643.060998l2577.489783 5602.728926"></path>
+                        <path id="downLeftTop20" stroke="#2b70df" d="M237.380174-2595.595613L2955.20033 2934.19919"></path>
+                        <path id="downLeftTop21" stroke="#2c73df" d="M168.489665-2547.767362l2857.199476 5457.169706"></path>
+                        <path id="downLeftTop22" stroke="#2c75df" d="M98.132501-2500.301977l2997.52985 5384.235581"></path>
+                        <path id="downLeftTop23" stroke="#2d78df" d="M28.775186-2452.81914L3166.63541 2858.482318"></path>
+                        <path id="downLeftTop24" stroke="#2e7adf" d="M-40.769766-2405.47514l3277.54856 5239.627413"></path>
+                        <path id="downLeftTop25" stroke="#2f7ddf" d="M-110.144535-2356.992455L3307.7344 2809.700837"></path>
+                        <path id="downLeftTop26" stroke="#307fdf" d="M-180.5017-2309.52707l3558.209311 5093.759177"></path>
+                        <path id="downLeftTop27" stroke="#3182de" d="M-249.392208-2261.698819L3448.19642 2759.435253"></path>
+                        <path id="downLeftTop28" stroke="#3284de" d="M-319.749372-2214.233434l3837.919 4948.199947"></path>
+                        <path id="downLeftTop29" stroke="#3387de" d="M-389.106687-2166.750597l3978.249373 4875.265825"></path>
+                        <path id="downLeftTop30" stroke="#3489de" d="M-458.651639-2119.406596L3659.286075 2684.18518"></path>
+                        <path id="downLeftTop31" stroke="#358cde" d="M-529.008803-2071.941212l4258.268091 4730.657663"></path>
+                        <path id="downLeftTop32" stroke="#368ede" d="M-598.366118-2024.458375l4398.598464 4657.72354"></path>
+                        <path id="downLeftTop33" stroke="#3791de" d="M-668.256476-1976.647576L3869.7213 2608.45086"></path>
+                        <path id="downLeftTop34" stroke="#3893de" d="M-737.613791-1929.16474l4678.308153 4512.164322"></path>
+                        <path id="downLeftTop35" stroke="#3996de" d="M-807.642994-1881.166308l4818.947544 4440.18125"></path>
+                        <path id="downLeftTop36" stroke="#3998de" d="M-876.516058-1834.337901L4081.81081 2533.21825"></path>
+                        <path id="downLeftTop37" stroke="#3a9bdd" d="M-946.890676-1785.872668L4151.766567 2508.74936"></path>
+                        <path id="downLeftTop38" stroke="#3b9ddd" d="M-1015.781185-1738.044418L4222.25537 2483.952507"></path>
+                        <path id="downLeftTop39" stroke="#3ca0dd" d="M-1086.13835-1690.579032l5378.36693 4149.0628"></path>
+                        <path id="downLeftTop40" stroke="#3da2dd" d="M-1155.495665-1643.096196l5518.697306 4076.128687"></path>
+                    </svg>
+                </div>
+
+                <div class="section-content">
+
+                    <div class="photo-render" style="background-image: url('/~/media/McKinsey/Home page/June 13 2019/Social-responsibility-2018-599240644-HP-1080x1068.ashx');">
+                    </div>
+
+                    <div class="text-wrapper">
+                        <div class="text-render text-l">
+                            <div class="eyebrow">
+                            </div>
+                            <h2 class="headline">
+                                Our social responsibility
+                            </h2>
+                            <p class="description">
+                                Learn how weâ€™re making a difference in our communities and for our planet.
+                            </p>
+                            <a class="cta -arrow" href="#" target="" aria-label="">Read the report</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="">
-            <a class="link text-white" href="/#">Twitter</a>
+
+        <div class="hero-with-partnership-mark section -bg-dark-blue-gradient text-right vertical-low fp-auto-height-responsive fp-section fp-table" data-module="HeroWithPartnershipMark" data-fp-styles="height: 331px;" style="height: 331px;">
+            <div class="fp-tableCell" style="height: 331px;">
+
+                <div class="bg" style="
+    background: -webkit-linear-gradient(-45deg, #77CEBD 60%, #C6DBDE 100%);
+    transition: opacity 0.6s ease-in-out;
+    opacity: 0.7;
+    position: absolute;
+    box-sizing: inherit;
+    z-index: 1;"></div>
+
+                <div class="mark">
+                    <svg id="downRightBottom" viewBox="0 0 3200 1800" preserveAspectRatio="xMidYMid slice">
+                        <path id="downRightBottom1" stroke="#1941e1" d="M-305.057915 4635.94398l3919.913682-7561.980083"></path>
+                        <path id="downRightBottom2" stroke="#1a43e1" d="M-329.287957 4546.781402l3946.373775-7383.654924"></path>
+                        <path id="downRightBottom3" stroke="#1b46e1" d="M-354.518013 4456.61882L3618.31587-2748.710942"></path>
+                        <path id="downRightBottom4" stroke="#1c48e1" d="M-378.748066 4366.45624L3620.54592-2660.548363"></path>
+                        <path id="downRightBottom5" stroke="#1d4be1" d="M-404.46893 4276.698255l4026.735713-6848.488628"></path>
+                        <path id="downRightBottom6" stroke="#1e4de1" d="M-428.698981 4187.535674L3624.496834-2482.62779"></path>
+                        <path id="downRightBottom7" stroke="#1f50e0" d="M-452.929034 4097.373093l4079.65592-6491.838305"></path>
+                        <path id="downRightBottom8" stroke="#1f52e0" d="M-478.649898 4007.615108l4107.09765-6313.32234"></path>
+                        <path id="downRightBottom9" stroke="#2055e0" d="M-502.389132 3918.047934l4132.576119-6135.187985"></path>
+                        <path id="downRightBottom10" stroke="#2157e0" d="M-528.109995 3828.289949l4160.017847-5956.67202"></path>
+                        <path id="downRightBottom11" stroke="#225ae0" d="M-552.340048 3738.127368l4186.477951-5778.34686"></path>
+                        <path id="downRightBottom12" stroke="#235ce0" d="M-577.570095 3647.964793l4212.938048-5600.021695"></path>
+                        <path id="downRightBottom13" stroke="#245fe0" d="M-601.800145 3558.802203l4239.39815-5421.696534"></path>
+                        <path id="downRightBottom14" stroke="#2561e0" d="M-626.0302 3468.63963l4265.858255-5243.371372"></path>
+                        <path id="downRightBottom15" stroke="#2664e0" d="M-651.260253 3379.477041l4292.31836-5065.04621"></path>
+                        <path id="downRightBottom16" stroke="#2766e0" d="M-676.385708 3288.228251l4319.569274-4885.548615"></path>
+                        <path id="downRightBottom17" stroke="#2869df" d="M-701.21117 3199.55648L3645.009022-1508.6486"></path>
+                        <path id="downRightBottom18" stroke="#296bdf" d="M-725.441213 3109.393899l4372.680286-4529.87992"></path>
+                        <path id="downRightBottom19" stroke="#2a6edf" d="M-750.671268 3020.23132L3648.469123-1331.32344"></path>
+                        <path id="downRightBottom20" stroke="#2b70df" d="M-774.90132 2930.068737L3650.699175-1243.16086"></path>
+                        <path id="downRightBottom21" stroke="#2c73df" d="M-800.026783 2839.819938l4452.851418-3993.732"></path>
+                        <path id="downRightBottom22" stroke="#2c75df" d="M-824.361418 2750.743577l4478.520695-3816.579276"></path>
+                        <path id="downRightBottom23" stroke="#2d78df" d="M-849.08229 2660.985596L3656.88014-977.07771"></path>
+                        <path id="downRightBottom24" stroke="#2e7adf" d="M-873.716933 2570.332196L3658.514788-888.424322"></path>
+                        <path id="downRightBottom25" stroke="#2f7ddf" d="M-898.542387 2481.660436L3660.340242-799.752548"></path>
+                        <path id="downRightBottom26" stroke="#307fdf" d="M-923.772443 2391.497854L3661.570293-711.58997"></path>
+                        <path id="downRightBottom27" stroke="#3182de" d="M-948.493303 2301.739864L3664.291158-622.831989"></path>
+                        <path id="downRightBottom28" stroke="#3284de" d="M-972.723355 2211.577282L3666.521209-534.66941"></path>
+                        <path id="downRightBottom29" stroke="#3387de" d="M-997.358 2121.923895L3668.155855-445.01601"></path>
+                        <path id="downRightBottom30" stroke="#3489de" d="M-1022.588046 2031.761314L3669.385906-356.85343"></path>
+                        <path id="downRightBottom31" stroke="#358cde" d="M-1047.413509 1942.08954L3671.211362-269.18167"></path>
+                        <path id="downRightBottom32" stroke="#368ede" d="M-1072.13437 1852.33156L3673.932225-180.42368"></path>
+                        <path id="downRightBottom33" stroke="#3791de" d="M-1096.769014 1762.678163L3675.566873-90.770289"></path>
+                        <path id="downRightBottom34" stroke="#3893de" d="M-1120.999068 1672.51559L3677.796922-2.6077"></path>
+                        <path id="downRightBottom35" stroke="#3996de" d="M-1146.229124 1582.353008L3679.026974 85.55488"></path>
+                        <path id="downRightBottom36" stroke="#3998de" d="M-1170.459166 1493.19043l4851.71619-1318.47297"></path>
+                        <path id="downRightBottom37" stroke="#3a9bdd" d="M-1195.689221 1403.027848L3682.487075 262.88004"></path>
+                        <path id="downRightBottom38" stroke="#3b9ddd" d="M-1220.410081 1313.269859L3685.20794 351.63802"></path>
+                        <path id="downRightBottom39" stroke="#3ca0dd" d="M-1245.640137 1223.107277L3686.437992 439.8006"></path>
+                        <path id="downRightBottom40" stroke="#3da2dd" d="M-1270.46559 1134.435517l4958.729036-605.963144"></path>
+                    </svg>
+                </div>
+
+                <div class="section-content">
+
+                    <div class="photo-render" style="background-image: url('/~/media/McKinsey/Home page/July 9 2019/MGI_Asias-future-is-now-HP-105784958.ashx');">
+                    </div>
+
+                    <div class="text-wrapper">
+                        <div class="text-render text-xxl">
+                            <div class="eyebrow">
+                            </div>
+                            <h2 class="headline">
+                                Asiaâ€™s future is now
+                            </h2>
+                            <p class="description">
+                                The regionâ€™s growing economy represents a real shift in the worldâ€™s center of gravity
+                            </p>
+                            <a class="cta -arrow" href="#" target="" aria-label="">Read the article</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
     </div>
-    <!-- bottom-left-links end -->
-    <!-- pagination start -->
-    <div class="main-slider-pagination pagination pagination-light"></div>
-    <!-- pagination end -->
 
 </section>
-<!-- slider end -->
-<section id="firstbannerhidden" class="work-header section-img-100vh">
-    <div class="bg-fixed overlay-black bg-image lazy" data-bg="url(/img/banners/3.jpg)">
-        <div class="work-header-content">
-            <h2 class="work-header-title text-white">
-                <span class="slide-over">Executivos TATICCA</span>
-            </h2>
-            <p class="work-header-text text-additional text-white">
-                <span class="slide-over">Conheça nossos especialistas</span>
-            </p>
-        </div>
-    </div>
-</section>
 
+<div class="wrapper universal-page">
+    <section id="firstSection" class="swiper-container slider-main slider-main-reveal bg-black" style="display:none">
+        <!-- swiper-wrapper start -->
+        <div class="swiper-wrapper">
 
+            <!-- swiper-slide start -->
+            <div class="swiper-slide slider-slide">
+                <!-- slide content start -->
+                <div class="slider-inner overlay-black bg-image lazy"
+                     data-bg="url(/img/banners/1.jpg)"
+                     data-swiper-parallax="1000" style="background-color:gray">
 
-<!-- section start serviços -->
-<section class="section-large bg-light">
-    <!-- container start -->
-    <div class="container">
+                    <!-- container start -->
+                    <div class="container">
+                        <!-- row start -->
+                        <div class="row">
 
-        <!-- row start -->
-        <div class="row">
-            <div class="col-xl-7 col-lg-9">
-                <div class="section-title section-title-medium md-center slide-left delay-1">
-                    <h3 class="text-additional subtitle" style="color: #28334e">Nossos Serviços</h3>
-                    @*<h2 class="">serviços</h2>*@
-                    <p class="section-text text-black">
-                        A TATICCA presta serviços de auditoria externa e interna, impostos, consultoria e assessoria empresarial, corporate finance, treinamentos, tecnologia, perícia e investigações, sustentabilidade, mapeamento de riscos e serviços correlatos.
-                    </p>
+                            <div class="col-xl-7 col-lg-8">
+                                <div class="slide-content slide-content-light slide-content-intro">
+                                    <p class="slide-subtitle">
+                                        <span>Saiba como</span>
+                                        <a href="#" id="example" rel="popover"
+                                           data-content="<div>This <b>is</b> your div content</div>"
+                                           data-html="true" data-original-title="A Title"></a>
+                                    </p>
+                                    <h1 class="slide-title">
+                                        <span>automatizar até 75%</span>
+                                    </h1>
+                                    <p class="slide-text text-lead">
+                                        <span>
+                                            das tarefas com RPA!
+
+                                        </span>
+                                    </p>
+
+                                    <!-- slider-nav start -->
+                                    <div class="slider-nav-outer">
+                                        <div class="slider-nav slider-nav-intro">
+                                            <div class="btn-prev circle circle-left click-target">
+                                                <div class="half-left">
+                                                    <div class="item"></div>
+                                                </div>
+
+                                                <i class="fa fa-arrow-left"></i>
+
+                                                <div class="half-right">
+                                                    <div class="item"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="btn-next circle circle-right click-target">
+                                                <div class="half-right">
+                                                    <div class="item"></div>
+                                                </div>
+
+                                                <i class="fa fa-arrow-right"></i>
+
+                                                <div class="half-left">
+                                                    <div class="item"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- slider-nav end -->
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- row end -->
+                    </div>
+                    <!-- container end -->
                 </div>
+                <!-- slide content end -->
+            </div>
+            <!-- swiper-slide end -->
+            <!-- swiper-slide start -->
+            <div class="swiper-slide slider-slide">
+                <!-- slide content start -->
+                <div class="slider-inner overlay-black bg-image lazy"
+                     data-bg="url(/img/banners/3.jpg)"
+                     data-swiper-parallax="1000">
+
+                    <!-- container start -->
+                    <div class="container">
+                        <!-- row start -->
+                        <div class="row">
+
+                            <div class="col-xl-7 col-lg-8">
+                                <div class="slide-content slide-content-light slide-content-second">
+                                    <p class="slide-subtitle">
+                                        <span>suspendisse potenti nullam</span>
+                                    </p>
+                                    <h1 class="slide-title">
+                                        <span>Dictum fusce</span>
+                                    </h1>
+                                    <p class="slide-text text-lead">
+                                        <span>
+                                            Faucibus vitae aliquet nec ullamcorper sit amet. Nec sagittis aliquam arcu vitae elementum curabitur.
+                                            Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum.
+                                        </span>
+                                    </p>
+
+                                    <!-- slider-nav start -->
+                                    <div class="slider-nav-outer">
+                                        <div class="slider-nav slider-nav-visible">
+                                            <div class="btn-prev circle circle-left click-target">
+                                                <div class="half-left">
+                                                    <div class="item"></div>
+                                                </div>
+
+                                                <i class="fa fa-arrow-left"></i>
+
+                                                <div class="half-right">
+                                                    <div class="item"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="btn-next circle circle-right click-target">
+                                                <div class="half-right">
+                                                    <div class="item"></div>
+                                                </div>
+
+                                                <i class="fa fa-arrow-right"></i>
+
+                                                <div class="half-left">
+                                                    <div class="item"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- slider-nav end -->
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- row end -->
+                    </div>
+                    <!-- container end -->
+                </div>
+                <!-- slide content end -->
+            </div>
+            <!-- swiper-slide end -->
+            <!-- swiper-slide start -->
+            <div class="swiper-slide slider-slide">
+                <!-- slide content start -->
+                <div class="slider-inner overlay-black bg-image lazy"
+                     data-bg="url(/img/banners/2.jpg)"
+                     data-swiper-parallax="1000">
+
+                    <!-- container start -->
+                    <div class="container">
+                        <!-- row start -->
+                        <div class="row">
+
+                            <div class="col-xl-7 col-lg-8">
+                                <div class="slide-content slide-content-light slide-content-second">
+                                    <p class="slide-subtitle">
+                                        <span>tellus in metus</span>
+                                    </p>
+                                    <h1 class="slide-title">
+                                        <span>elit mauris</span>
+                                    </h1>
+                                    <p class="slide-text text-lead">
+                                        <span>
+                                            Odio ut enim blandit volutpat maecenas volutpat. Cursus mattis molestie a iaculis at erat pellentesque.
+                                            Diam sollicitudin tempor id eu nisl. Urna id volutpat lacus laoreet non.
+                                        </span>
+                                    </p>
+
+                                    <!-- slider-nav start -->
+                                    <div class="slider-nav-outer">
+                                        <div class="slider-nav slider-nav-visible">
+                                            <div class="btn-prev circle circle-left click-target">
+                                                <div class="half-left">
+                                                    <div class="item"></div>
+                                                </div>
+
+                                                <i class="fa fa-arrow-left"></i>
+
+                                                <div class="half-right">
+                                                    <div class="item"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="btn-next circle circle-right click-target">
+                                                <div class="half-right">
+                                                    <div class="item"></div>
+                                                </div>
+
+                                                <i class="fa fa-arrow-right"></i>
+
+                                                <div class="half-left">
+                                                    <div class="item"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- slider-nav end -->
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- row end -->
+                    </div>
+                    <!-- container end -->
+                </div>
+                <!-- slide content end -->
+            </div>
+            <!-- swiper-slide end -->
+            <!-- swiper-slide start -->
+            <div class="swiper-slide slider-slide">
+                <!-- slide content start -->
+                <div class="slider-inner overlay-black bg-image lazy"
+                     data-bg="url(/img/banners/4.jpg)"
+                     data-swiper-parallax="1000">
+
+                    <!-- container start -->
+                    <div class="container">
+                        <!-- row start -->
+                        <div class="row">
+
+                            <div class="col-xl-7 col-lg-8">
+                                <div class="slide-content slide-content-light slide-content-second">
+                                    <p class="slide-subtitle">
+                                        <span>eget nunc lobortis</span>
+                                    </p>
+                                    <h1 class="slide-title">
+                                        <span>Consequat mauris</span>
+                                    </h1>
+                                    <p class="slide-text text-lead">
+                                        <span>
+                                            Quam quisque id elementum pulvinar. Nulla aliquet enim tortor at auctor urna. Dui accumsan sit
+                                            amet morbi tempus. Tempor commodo ullamcorper a lacus vestibulum arcu non odio.
+                                        </span>
+                                    </p>
+
+                                    <!-- slider-nav start -->
+                                    <div class="slider-nav-outer">
+                                        <div class="slider-nav slider-nav-visible">
+                                            <div class="btn-prev circle circle-left click-target">
+                                                <div class="half-left">
+                                                    <div class="item"></div>
+                                                </div>
+
+                                                <i class="fa fa-arrow-left"></i>
+
+                                                <div class="half-right">
+                                                    <div class="item"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="btn-next circle circle-right click-target">
+                                                <div class="half-right">
+                                                    <div class="item"></div>
+                                                </div>
+
+                                                <i class="fa fa-arrow-right"></i>
+
+                                                <div class="half-left">
+                                                    <div class="item"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- slider-nav end -->
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- row end -->
+                    </div>
+                    <!-- container end -->
+                </div>
+                <!-- slide content end -->
+            </div>
+            <!-- swiper-slide end -->
+
+        </div>
+        <!-- swiper-wrapper end -->
+        <!-- bottom-left-links start -->
+        <div class="bottom-left-links">
+            <div class="">
+                <a class="link text-white" href="/#">Behance</a>
+            </div>
+            <div class="">
+                <a class="link text-white" href="/#">FaceBook</a>
+            </div>
+            <div class="">
+                <a class="link text-white" href="/#">Twitter</a>
             </div>
         </div>
-        <!-- row end -->
-        <!-- card-group start -->
-        <div class="card-group">
+        <!-- bottom-left-links end -->
+        <!-- pagination start -->
+        <div class="main-slider-pagination pagination pagination-light"></div>
+        <!-- pagination end -->
+
+    </section>
+    
+    <!-- section start serviços -->
+    <section class="section-large bg-light">
+        <!-- container start -->
+        <div class="container">
+
             <!-- row start -->
-            <div class="row justify-content-center">
-
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <div class="icon fa fa-pencil-ruler"></div>
-                            </div>
-                            <h3 class="card-title">AUDIT</h3>
-                            <p class="card-text text-black">
-                                At lectus urna duis convallis convallis tellus.
-                                Ornare ut sem nulla pharetra diam sit amet.
-                            </p>
-                            <a href="~/Servico/AuditoriaInternaEExterna" class="card-btn text-black">
-                                <i class="fa fa-arrow-left icon-arrow-right"></i>
-                            </a>
-                        </div>
+            <div class="row">
+                <div class="col-xl-7 col-lg-9">
+                    <div class="section-title section-title-medium md-center slide-left delay-1">
+                        <p class="text-additional subtitle">Nossos</p>
+                        <h2 class="">serviços</h2>
+                        <p class="section-text text-black">
+                            A TATICCA presta serviços de auditoria externa e interna, impostos, consultoria e assessoria empresarial, corporate finance, treinamentos, tecnologia, perícia e investigações, sustentabilidade, mapeamento de riscos e serviços correlatos.
+                        </p>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-1">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <div class="icon fa fa-object-group"></div>
-                            </div>
-                            <h3 class="card-title">
-                                CORPORATE FINANCE
-                            </h3>
-                            <p class="card-text text-black">
-                                Viverra aliquet eget sit amet tellus. Facilisis sit amet massa.
-                                Ac orci phasellus rutrum tellus.
-                            </p>
-                            <a href="~/Servico/CORPORATEFINANCE" class="card-btn text-black">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-2">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <div class="icon fa fa-fill"></div>
-                            </div>
-                            <h3 class="card-title">
-                                STRATEGY &
-                                OPERATIONS ADVISORY
-                            </h3>
-                            <p class="card-text text-black">
-                                Ac orci phasellus egestas tellus rutrum tellus.
-                                Pellentesque habitant morbi tristique.
-                            </p>
-                            <a href="~/Servico/STRATEGYOPERATIONSADVISORY" class="card-btn text-black">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
-                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-1">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <i class="fa fa-edit"></i>
-                            </div>
-                            <h3 class="card-title">TAX</h3>
-                            <p class="card-text text-black">
-                                Pellentesque senectus et netus et malesuada.
-                                Fringilla phasellus faucibus scelerisque.
-                            </p>
-                            <a href="~/Servico/TAX" class="card-btn text-black">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
-                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-2">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <i class="fa fa-lightbulb"></i>
-                            </div>
-                            <h3 class="card-title">
-                                RISK ADVISORY
-                            </h3>
-                            <p class="card-text text-black">
-                                Ornare arcu odio ut pharetra diam sit amet.
-                                At lectus urna duis convallis convallis tellus.
-                            </p>
-                            <a href="~/Servico/RISKADVISORY" class="card-btn text-black">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
-                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-3">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <i class="fa fa-brush"></i>
-                            </div>
-                            <h3 class="card-title">OUTSOURCING</h3>
-                            <p class="card-text text-black">
-                                At quis risus sed vulputate odio ut enim blandit volutpat.
-                                Sed tincidunt ornare massa.
-                            </p>
-                            <a href="~/Servico/Outsourcing" class="card-btn text-black">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
-                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-3">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <i class="fa fa-brush"></i>
-                            </div>
-                            <h3 class="card-title">TECHNOLOGY</h3>
-                            <p class="card-text text-black">
-                                At quis risus sed vulputate odio ut enim blandit volutpat.
-                                Sed tincidunt ornare massa.
-                            </p>
-                            <a href="~/Servico/Technology" class="card-btn text-black">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up">
-                        <div class="card-content">
-                            <div class="card-icon">
-                                <div class="icon fa fa-pencil-ruler"></div>
-                            </div>
-                            <h3 class="card-title">TRAINING</h3>
-                            <p class="card-text text-black">
-                                At lectus urna duis convallis convallis tellus.
-                                Ornare ut sem nulla pharetra diam sit amet.
-                            </p>
-                            <a href="~/Servico/Trining" class="card-btn text-black">
-                                <i class="fa fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
             </div>
             <!-- row end -->
-        </div>
-        <!-- card-group end -->
+            <!-- card-group start -->
+            <div class="card-group">
+                <!-- row start -->
+                <div class="row justify-content-center">
 
-    </div>
-    <!-- container end -->
-</section>
-<!-- section end serviços -->
-<!-- section start -->
-<div class="section-img-100vh bg-black overlay-black">
-    <div class="bg-image lazy" data-bg="url(/img/video/capavideo.jpg)">
-        <!-- video start -->
-        <div class="video">
-            <button class="video-link text-white">
-                <i class="icon-triangle"></i>
-            </button>
-            <div class="video-inner">
-                <iframe width="600px" src="https://www.youtube.com/embed/mnAsr58InQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="card bg-gray card-large card-hover-btn cursor-color slide-up">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <div class="icon fa fa-calculator"></div>
+                                </div>
+                                <h3 class="card-title">AUDIT</h3>
+                                <p class="card-text text-black">
+                                    At lectus urna duis convallis convallis tellus.
+                                    Ornare ut sem nulla pharetra diam sit amet.
+                                </p>
+                                <a href="~/Servico/AuditoriaInternaEExterna" class="card-btn text-black">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-1">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <div class="icon fa fa-object-group"></div>
+                                </div>
+                                <h3 class="card-title">
+                                    CORPORATE FINANCE
+                                </h3>
+                                <p class="card-text text-black">
+                                    Viverra aliquet eget sit amet tellus. Facilisis sit amet massa.
+                                    Ac orci phasellus rutrum tellus.
+                                </p>
+                                <a href="~/Servico/CORPORATEFINANCE" class="card-btn text-black">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-2">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <div class="icon fa fa-fire"></div>
+                                </div>
+                                <h3 class="card-title">
+                                    STRATEGY &
+                                    OPERATIONS ADVISORY
+                                </h3>
+                                <p class="card-text text-black">
+                                    Ac orci phasellus egestas tellus rutrum tellus.
+                                    Pellentesque habitant morbi tristique.
+                                </p>
+                                <a href="~/Servico/STRATEGYOPERATIONSADVISORY" class="card-btn text-black">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
+                        <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-1">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fa fa-edit"></i>
+                                </div>
+                                <h3 class="card-title">TAX</h3>
+                                <p class="card-text text-black">
+                                    Pellentesque senectus et netus et malesuada.
+                                    Fringilla phasellus faucibus scelerisque.
+                                </p>
+                                <a href="~/Servico/TAX" class="card-btn text-black">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
+                        <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-2">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fa fa-lightbulb-o"></i>
+                                </div>
+                                <h3 class="card-title">
+                                    RISK ADVISORY
+                                </h3>
+                                <p class="card-text text-black">
+                                    Ornare arcu odio ut pharetra diam sit amet.
+                                    At lectus urna duis convallis convallis tellus.
+                                </p>
+                                <a href="~/Servico/RISKADVISORY" class="card-btn text-black">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
+                        <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-3">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fa fa-archive"></i>
+                                </div>
+                                <h3 class="card-title">OUTSOURCING</h3>
+                                <p class="card-text text-black">
+                                    At quis risus sed vulputate odio ut enim blandit volutpat.
+                                    Sed tincidunt ornare massa.
+                                </p>
+                                <a href="~/Servico/Outsourcing" class="card-btn text-black">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
+                        <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-3">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <i class="fa fa-laptop"></i>
+                                </div>
+                                <h3 class="card-title">TECHNOLOGY</h3>
+                                <p class="card-text text-black">
+                                    At quis risus sed vulputate odio ut enim blandit volutpat.
+                                    Sed tincidunt ornare massa.
+                                </p>
+                                <a href="~/Servico/Technology" class="card-btn text-black">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="card bg-gray card-large card-hover-btn cursor-color slide-up">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <div class="icon fa fa-university"></div>
+                                </div>
+                                <h3 class="card-title">TRAINING</h3>
+                                <p class="card-text text-black">
+                                    At lectus urna duis convallis convallis tellus.
+                                    Ornare ut sem nulla pharetra diam sit amet.
+                                </p>
+                                <a href="~/Servico/Trining" class="card-btn text-black">
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                <!-- row end -->
             </div>
+            <!-- card-group end -->
+
         </div>
-        <!-- video end -->
+        <!-- container end -->
+    </section>
+    <!-- section end serviços -->
+    <!-- section start -->
+    <div class="section-img-100vh bg-black overlay-black">
+        <div class="bg-image lazy" data-bg="url(/img/video/capavideo.jpg)">
+            <!-- video start -->
+            <div class="video">
+                <button class="video-link text-white">
+                    <i class="icon-triangle"></i>
+                </button>
+                <div class="video-inner">
+                    <iframe width="600px" src="https://www.youtube.com/embed/mnAsr58InQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- video end -->
+        </div>
     </div>
-    </div>
+
+
     <!-- section end -->
     <!-- section start sobre nós -->
     <section class="intro section-large section-80vh bg-light">
@@ -563,7 +867,7 @@
 
                 <div class="col-lg-10">
                     <div class="section-title section-title-large slide-left">
-                        <h3 class="text-additional subtitle" style="color: #28334e">Sobre Nós</h3>
+                        <h2>Sobre Nós</h2>
                     </div>
 
                     <p class="text-lead text-black slide-left delay-1">
@@ -595,7 +899,7 @@
     </section>
     <!-- section end sobre nós -->
     <!-- section start escritórios -->
-    <section id="escritorios" class="section-large bg-black" style="background-color:url('/img/Background/3.jpg'); background-size:cover">
+    <section id="escritorios" class="section-large bg-black" style="background-image:url('/img/Background/3.jpg'); background-size:cover">
         <!-- container start -->
         <div class="container">
 
@@ -603,9 +907,9 @@
             <div class="row">
                 <div class="col-xl-8 col-lg-9">
                     <div class="section-title section-title-medium">
-                        <p class="text-additional subtitle slide-left">Encontre Nossos Escritórios</p>
+                        <p class="text-additional subtitle slide-left" style="color:white">Encontre Nossos Escritórios</p>
                         @*<h2 class="text-white slide-left">
-                            
+
                         </h2>*@
                         <p class="section-text text-white slide-left delay-1">
                             Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
@@ -624,10 +928,10 @@
 
                 <!-- row start -->
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <a class="portfolio-item" data-swup href="/contato">
                             <div class="portfolio-img cover-down delay-2">
-                                <div class="bg-image lazy" data-bg="url(/img/escritorios/saopaulo.jpg)"></div>
+                                <div class="bg-image lazy" data-bg="url(/img/escritorios/saopaulo.jpg)" style="width: 210px; height: 100px;"></div>
                             </div>
                             <div class="portfolio-info slide-left delay-1">
                                 <span class="text-additional">
@@ -637,10 +941,10 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <a class="portfolio-item" data-swup href="/contato">
                             <div class="portfolio-img cover-down delay-2">
-                                <div class="bg-image lazy" data-bg="url(/img/escritorios/curitiba.jpg)"></div>
+                                <div class="bg-image lazy" data-bg="url(/img/escritorios/curitiba.jpg)" style="width: 210px; height: 100px"></div>
                             </div>
                             <div class="portfolio-info slide-left delay-1">
                                 <span class="text-additional">Agua Verde</span>
@@ -648,7 +952,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <a class="portfolio-item" data-swup href="/contato">
                             <div class="portfolio-img cover-down delay-2">
                                 <div class="bg-image lazy" data-bg="url(/img/escritorios/portoalegre.jpg)"></div>
@@ -659,13 +963,9 @@
                             </div>
                         </a>
                     </div>
-                </div>
-                <!-- row end -->
-                <!-- row start -->
-                <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <a class="portfolio-item" data-swup href="/contato">
-                            <div class="portfolio-img cover-down">
+                            <div class="portfolio-img cover-down delay-2">
                                 <div class="bg-image lazy" data-bg="url(/img/escritorios/Blumenau.jpg)"></div>
                             </div>
                             <div class="portfolio-info slide-left delay-1">
@@ -674,8 +974,12 @@
                             </div>
                         </a>
                     </div>
+                </div>
+                <!-- row end -->
+                <!-- row start -->
 
-                    <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-3">
                         <a class="portfolio-item" data-swup href="/contato">
                             <div class="portfolio-img cover-down delay-2">
                                 <div class="bg-image lazy" data-bg="url(/img/escritorios/belohorizonte.jpg)"></div>
@@ -687,9 +991,9 @@
                         </a>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <a class="portfolio-item" data-swup href="/contato">
-                            <div class="portfolio-img cover-down">
+                            <div class="portfolio-img cover-down delay-2">
                                 <div class="bg-image lazy" data-bg="url(/img/escritorios/brasilia.jpg)"></div>
                             </div>
                             <div class="portfolio-info slide-left delay-1">
@@ -698,12 +1002,7 @@
                             </div>
                         </a>
                     </div>
-                </div>
-                <!-- row end -->
-                <!-- row start -->
-
-                <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <a class="portfolio-item" data-swup href="/contato">
                             <div class="portfolio-img cover-down delay-2">
                                 <div class="bg-image lazy" data-bg="url(/img/escritorios/riodejaneiro.jpg)"></div>
@@ -714,7 +1013,10 @@
                             </div>
                         </a>
                     </div>
+
                 </div>
+                <!-- row end -->
+                <!-- row start -->
                 <!-- row end -->
             </div>
             <!-- container end -->
@@ -731,8 +1033,8 @@
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="section-title section-title-large text-center slide-up">
-                        <h3 class="text-additional subtitle" style="color: #28334e">Nossos Clientes</h3>
-                        @*<h2>Clientes</h2>*@
+                        <p class="text-additional subtitle">Nossos</p>
+                        <h2>Clientes</h2>
                     </div>
                 </div>
             </div>
@@ -904,3 +1206,4 @@
         <!-- container end -->
     </section>
     <!-- section end blog-->
+</div>

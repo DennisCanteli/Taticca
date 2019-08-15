@@ -25,7 +25,7 @@
         .subnav-title {
             display: none
         }
-
+        
         .suy, .subnav-item, nav-link, submenu {
             font-family: 'McKinsey Theinhardt', 'Helvetica Neue', Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
             font-size: 1.125rem;
@@ -38,6 +38,7 @@
             width: 33.33%;
             float: left;
         }
+
     </style>
     @RenderSection("css", required: false)
 
@@ -73,16 +74,16 @@
             <!-- menu-icon start -->
             <div class="menu-outer-wrap">
                 <div class="menu-wrap ">
-                    <div class="menu menu-hover click-target pull-left">
+                    <div class="menu menu-hover click-target pull-left" style="color:blue;">
                         <span class="menu-line-1"></span>
                         <span class="menu-line-2"></span>
                         <span class="menu-line-3"></span>
                     </div>
                 </div>
             </div>
-            <div class="logo-box pull-left" style="left: 121px; margin-top: 1px; position: absolute;">
+            <div class="logo-box pull-left" style="left: 101px; margin-top: 1px; position: absolute;">
                 <a data-swup href="/" class="logo">
-                    <img src="~/img/logo/logo.fw.png" alt="logo" style="width: 250px;" @*width="50%"*@>
+                    <img src="~/img/logo/logo.fw.png" alt="logo"  style="width: 250px;">
                 </a>
             </div>
             <!-- menu-icon end -->
@@ -109,8 +110,8 @@
                 <div class="menu-container">
 
                     <!-- menu-header start -->
-                    <div class="menu-header" style="margin-top:15px">
-                        @*<h4>Navegação</h4>*@
+                    <div class="menu-header" style="margin-top:35px">
+                        <h4>Navegação</h4>
                     </div>
                     <!-- menu-header end -->
 
@@ -118,10 +119,10 @@
                         <!-- navigation start -->
                         <nav class="navigation col-md-12" id="principalmenu">
                             <ul class="navigation-list">
-                                @*<li class="navigation-item" style="margin-top:57px">
+                                <li class="navigation-item" style="margin-top:30px">
                                     <a class="nav-link suy" data-swup href="/">Início</a>
-                                </li>*@
-                                <li class="navigation-item" style="margin-top:80px">
+                                </li>
+                                <li class="navigation-item">
                                     <a class="nav-link suy">
                                         Sobre Nós
                                         <i class="fa fa-arrow-right"></i>
@@ -137,6 +138,9 @@
                                             </li>
                                             <li class="subnav-item">
                                                 <a data-swup href="/sobrenos">Sobre Nós </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/sobrenos">Sobre a TATICCA Allinial Global </a>
                                             </li>
                                             <li class="subnav-item">
                                                 <a data-swup href="/equipe">
@@ -179,21 +183,16 @@
                                                 </a>
                                             </li>
                                             <li class="subnav-item">
-                                                <a data-swup href="@Url.Action("index", "Servico")">Serviços</a>
+                                                <a data-swup href="@Url.Action("index", "Servico")">Ver todos</a>
                                             </li>
                                             <li class="subnav-item">
                                                 <a data-swup href="@Url.Action("AuditoriaInternaEExterna", "Servico")">
-                                                    Auditoria Interna e Externa
+                                                    Audit
                                                 </a>
                                             </li>
                                             <li class="subnav-item">
-                                                <a data-swup href="@Url.Action("CORPORATEFINANCE", "Servico")">
-                                                    Corporate Finance
-                                                </a>
-                                            </li>
-                                            <li class="subnav-item">
-                                                <a data-swup href="@Url.Action("OUTSOURCING", "Servico")">
-                                                    OutSorcing
+                                                <a data-swup href="@Url.Action("STRATEGYOPERATIONSADVISORY", "Servico")">
+                                                    Strategy Operation Advisory
                                                 </a>
                                             </li>
                                             <li class="subnav-item">
@@ -202,8 +201,8 @@
                                                 </a>
                                             </li>
                                             <li class="subnav-item">
-                                                <a data-swup href="@Url.Action("STRATEGYOPERATIONSADVISORY", "Servico")">
-                                                    Strategy Operation Advisory
+                                                <a data-swup href="@Url.Action("CORPORATEFINANCE", "Servico")">
+                                                    Transaction
                                                 </a>
                                             </li>
                                             <li class="subnav-item">
@@ -217,8 +216,27 @@
                                                 </a>
                                             </li>
                                             <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("CORPORATEFINANCE", "Servico")">
+                                                    Corporate Finance
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("OUTSOURCING", "Servico")">
+                                                    BPS / Outsourcing
+                                                </a>
+                                            </li>
+
+
+
+                                            <li class="subnav-item">
                                                 <a data-swup href="@Url.Action("TRAINING", "Servico")">
-                                                    Training
+                                                    TATICCA  University / Training
+                                                </a>
+                                            </li>
+
+                                            <li class="subnav-item">
+                                                <a data-swup href="@Url.Action("TRAINING", "Servico")">
+                                                    Sustentabilidade
                                                 </a>
                                             </li>
 
@@ -236,10 +254,14 @@
                                             <li class="subnav-item">
                                                 <a class="subnav-title">
                                                     <i class="fa fa-arrow-left"></i>
+
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
                                                     Automotivo
                                                 </a>
                                             </li>
-                                            
                                             <li class="subnav-item">
                                                 <a data-swup href="/equipe">
                                                     Energia e serviços de utilidade pública
@@ -255,11 +277,8 @@
                                                     Healthcare
                                                 </a>
                                             </li>
-                                            <li class="subnav-item">
-                                                <a data-swup href="/home/#escritorios">
-                                                    Varejo e consumo
-                                                </a>
-                                            </li>
+
+
                                             <li class="subnav-item">
                                                 <a data-swup href="/home/#escritorios">
                                                     Private Equity
@@ -278,6 +297,12 @@
                                             <li class="subnav-item">
                                                 <a data-swup href="/home/#escritorios">
                                                     Turismo e lazer
+                                                </a>
+                                            </li>
+
+                                            <li class="subnav-item">
+                                                <a data-swup href="/home/#escritorios">
+                                                    Varejo e consumo
                                                 </a>
                                             </li>
                                             <li class="subnav-item">
@@ -302,12 +327,12 @@
                                 </li>
                                 <li class="navigation-item">
                                     <a class="nav-link suy" data-swup href="/Contato">
-                                        Fale Conosco 
+                                        Fale Conosco
                                     </a>
                                 </li>
                                 <li class="navigation-item">
                                     <a class="nav-link suy" data-swup href="/Contato">
-                                        Área do Cliente 
+                                        Área do Cliente
                                     </a>
                                 </li>
                             </ul>
@@ -320,23 +345,7 @@
                         </div>
                     </div>
                     <!-- social start -->
-                    @*<div class="social social-navigation">
-                        <div class="social-item">
-                            <a class="text-white" href="/#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </div>
-                        <div class="social-item">
-                            <a class="text-white" href="/#">
-                                <i class="fa fa-youtube"></i>
-                            </a>
-                        </div>
-                        <div class="social-item">
-                            <a class="text-white" href="/#">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>*@
+                   
                     <!-- social end -->
 
                 </div>
@@ -434,16 +443,13 @@
     <!-- Basic example -->
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js"></script>
     <script>
         var visible = true;
-        var logo = false
 
         $(function () {
-
+            
             $('.click-target').click(function () {
                 $('.logo-box').fadeToggle();
-                $('.header').append('<div class="logo-box pull-left" style="margin-left: 50px; margin-top: 1px; position: absolute;"><img src="/img/logo/taticca-branco.png" alt="logo" style="width: 200px;"></a></div >')
             });
 
             $('#principalmenu a').mouseover(function () {
@@ -490,19 +496,7 @@
     @RenderSection("js", required: false)
 
     <script>
-        $(function () {
-            ReloadPlugins();
-        })
-
-        function ReloadPlugins() {
-            if (window.location.pathname.toLowerCase() != localStorage["paginareferencia"]) {
-                window.location.reload();
-            } localStorage["paginareferencia"] = window.location.pathname.toLowerCase();
-
-            setTimeout(function () {
-                ReloadPlugins();
-            }, 1000);
-        }
+        $(function () { if (window.location.pathname.toLowerCase() != localStorage["paginareferencia"]) { if (window.location.pathname.toLowerCase() == '/sobrenos') { window.location.reload(); } } localStorage["paginareferencia"] = window.location.pathname.toLowerCase(); })
     </script>
 </body>
 </html>

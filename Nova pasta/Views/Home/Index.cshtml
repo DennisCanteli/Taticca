@@ -1,0 +1,904 @@
+﻿@{
+    ViewBag.Title = "Início | Tattica";
+}
+
+<!-- slider start -->
+@section js{
+    @* <script>
+            $(function () {
+                //$('.section-large, .section-img-100vh, footer').hide();
+                $(document).scroll(function () {
+                    if ($(document).scrollTop() == 0 && !visible) {
+                        //$('.section-large, .section-img-100vh, footer').hide();
+                        $('#firstSection, header').hide().fadeIn('slow');
+                        $('html, body').animate({
+                            scrollTop: 0
+                        }, 200);
+
+                        visible = true;
+                    }
+
+                    if ($(document).scrollTop() > 0 && visible) {
+                        $('#firstSection, header').hide(3000);
+                        $('.section-large, .section-img-100vh[id!="firstSection"], footer').hide().fadeIn('slow');
+                        $('html, body').animate({
+                            scrollTop: 100
+                        }, 200);
+                        setTimeout(function () {
+                            visible = false;
+                        }, 600);
+                    }
+                });
+            })
+        </script>*@
+}
+
+<section id="firstSection" class="swiper-container slider-main slider-main-reveal bg-black">
+    <!-- swiper-wrapper start -->
+    <div class="swiper-wrapper">
+
+        <!-- swiper-slide start -->
+        <div class="swiper-slide slider-slide">
+            <!-- slide content start -->
+            <div class="slider-inner overlay-black bg-image lazy"
+                 data-bg="url(/img/banners/1.jpg)"
+                 data-swiper-parallax="1000">
+
+                <!-- container start -->
+                <div class="container">
+                    <!-- row start -->
+                    <div class="row">
+
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="slide-content slide-content-light slide-content-intro">
+                                <p class="slide-subtitle">
+                                    <span>Saiba como</span>
+                                    <a href="#" id="example" rel="popover"
+                                       data-content="<div>This <b>is</b> your div content</div>"
+                                       data-html="true" data-original-title="A Title"></a>
+                                </p>
+                                <h1 class="slide-title">
+                                    <span>automatizar até 75%</span>
+                                </h1>
+                                <p class="slide-text text-lead">
+                                    <span>
+                                        das tarefas com RPA!
+
+                                    </span>
+                                </p>
+
+                                <!-- slider-nav start -->
+                                <div class="slider-nav-outer">
+                                    <div class="slider-nav slider-nav-intro">
+                                        <div class="btn-prev circle circle-left click-target">
+                                            <div class="half-left">
+                                                <div class="item"></div>
+                                            </div>
+
+                                            <i class="fa fa-arrow-left"></i>
+
+                                            <div class="half-right">
+                                                <div class="item"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-next circle circle-right click-target">
+                                            <div class="half-right">
+                                                <div class="item"></div>
+                                            </div>
+
+                                            <i class="fa fa-arrow-right"></i>
+
+                                            <div class="half-left">
+                                                <div class="item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slider-nav end -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- row end -->
+                </div>
+                <!-- container end -->
+            </div>
+            <!-- slide content end -->
+        </div>
+        <!-- swiper-slide end -->
+        <!-- swiper-slide start -->
+        <div class="swiper-slide slider-slide">
+            <!-- slide content start -->
+            <div class="slider-inner overlay-black bg-image lazy"
+                 data-bg="url(/img/banners/3.jpg)"
+                 data-swiper-parallax="1000">
+
+                <!-- container start -->
+                <div class="container">
+                    <!-- row start -->
+                    <div class="row">
+
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="slide-content slide-content-light slide-content-second">
+                                <p class="slide-subtitle">
+                                    <span>suspendisse potenti nullam</span>
+                                </p>
+                                <h1 class="slide-title">
+                                    <span>Dictum fusce</span>
+                                </h1>
+                                <p class="slide-text text-lead">
+                                    <span>
+                                        Faucibus vitae aliquet nec ullamcorper sit amet. Nec sagittis aliquam arcu vitae elementum curabitur.
+                                        Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum.
+                                    </span>
+                                </p>
+
+                                <!-- slider-nav start -->
+                                <div class="slider-nav-outer">
+                                    <div class="slider-nav slider-nav-visible">
+                                        <div class="btn-prev circle circle-left click-target">
+                                            <div class="half-left">
+                                                <div class="item"></div>
+                                            </div>
+
+                                            <i class="fa fa-arrow-left"></i>
+
+                                            <div class="half-right">
+                                                <div class="item"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-next circle circle-right click-target">
+                                            <div class="half-right">
+                                                <div class="item"></div>
+                                            </div>
+
+                                            <i class="fa fa-arrow-right"></i>
+
+                                            <div class="half-left">
+                                                <div class="item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slider-nav end -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- row end -->
+                </div>
+                <!-- container end -->
+            </div>
+            <!-- slide content end -->
+        </div>
+        <!-- swiper-slide end -->
+        <!-- swiper-slide start -->
+        <div class="swiper-slide slider-slide">
+            <!-- slide content start -->
+            <div class="slider-inner overlay-black bg-image lazy"
+                 data-bg="url(/img/banners/2.jpg)"
+                 data-swiper-parallax="1000">
+
+                <!-- container start -->
+                <div class="container">
+                    <!-- row start -->
+                    <div class="row">
+
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="slide-content slide-content-light slide-content-second">
+                                <p class="slide-subtitle">
+                                    <span>tellus in metus</span>
+                                </p>
+                                <h1 class="slide-title">
+                                    <span>elit mauris</span>
+                                </h1>
+                                <p class="slide-text text-lead">
+                                    <span>
+                                        Odio ut enim blandit volutpat maecenas volutpat. Cursus mattis molestie a iaculis at erat pellentesque.
+                                        Diam sollicitudin tempor id eu nisl. Urna id volutpat lacus laoreet non.
+                                    </span>
+                                </p>
+
+                                <!-- slider-nav start -->
+                                <div class="slider-nav-outer">
+                                    <div class="slider-nav slider-nav-visible">
+                                        <div class="btn-prev circle circle-left click-target">
+                                            <div class="half-left">
+                                                <div class="item"></div>
+                                            </div>
+
+                                            <i class="fa fa-arrow-left"></i>
+
+                                            <div class="half-right">
+                                                <div class="item"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-next circle circle-right click-target">
+                                            <div class="half-right">
+                                                <div class="item"></div>
+                                            </div>
+
+                                            <i class="fa fa-arrow-right"></i>
+
+                                            <div class="half-left">
+                                                <div class="item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slider-nav end -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- row end -->
+                </div>
+                <!-- container end -->
+            </div>
+            <!-- slide content end -->
+        </div>
+        <!-- swiper-slide end -->
+        <!-- swiper-slide start -->
+        <div class="swiper-slide slider-slide">
+            <!-- slide content start -->
+            <div class="slider-inner overlay-black bg-image lazy"
+                 data-bg="url(/img/banners/4.jpg)"
+                 data-swiper-parallax="1000">
+
+                <!-- container start -->
+                <div class="container">
+                    <!-- row start -->
+                    <div class="row">
+
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="slide-content slide-content-light slide-content-second">
+                                <p class="slide-subtitle">
+                                    <span>eget nunc lobortis</span>
+                                </p>
+                                <h1 class="slide-title">
+                                    <span>Consequat mauris</span>
+                                </h1>
+                                <p class="slide-text text-lead">
+                                    <span>
+                                        Quam quisque id elementum pulvinar. Nulla aliquet enim tortor at auctor urna. Dui accumsan sit
+                                        amet morbi tempus. Tempor commodo ullamcorper a lacus vestibulum arcu non odio.
+                                    </span>
+                                </p>
+
+                                <!-- slider-nav start -->
+                                <div class="slider-nav-outer">
+                                    <div class="slider-nav slider-nav-visible">
+                                        <div class="btn-prev circle circle-left click-target">
+                                            <div class="half-left">
+                                                <div class="item"></div>
+                                            </div>
+
+                                            <i class="fa fa-arrow-left"></i>
+
+                                            <div class="half-right">
+                                                <div class="item"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-next circle circle-right click-target">
+                                            <div class="half-right">
+                                                <div class="item"></div>
+                                            </div>
+
+                                            <i class="fa fa-arrow-right"></i>
+
+                                            <div class="half-left">
+                                                <div class="item"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slider-nav end -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- row end -->
+                </div>
+                <!-- container end -->
+            </div>
+            <!-- slide content end -->
+        </div>
+        <!-- swiper-slide end -->
+
+    </div>
+    <!-- swiper-wrapper end -->
+    <!-- bottom-left-links start -->
+    <div class="bottom-left-links">
+        <div class="">
+            <a class="link text-white" href="/#">Behance</a>
+        </div>
+        <div class="">
+            <a class="link text-white" href="/#">FaceBook</a>
+        </div>
+        <div class="">
+            <a class="link text-white" href="/#">Twitter</a>
+        </div>
+    </div>
+    <!-- bottom-left-links end -->
+    <!-- pagination start -->
+    <div class="main-slider-pagination pagination pagination-light"></div>
+    <!-- pagination end -->
+
+</section>
+<!-- slider end -->
+<section id="firstbannerhidden" class="work-header section-img-100vh">
+    <div class="bg-fixed overlay-black bg-image lazy" data-bg="url(/img/banners/3.jpg)">
+        <div class="work-header-content">
+            <h2 class="work-header-title text-white">
+                <span class="slide-over">Executivos TATICCA</span>
+            </h2>
+            <p class="work-header-text text-additional text-white">
+                <span class="slide-over">Conheça nossos especialistas</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- section start serviços -->
+<section class="section-large bg-light">
+    <!-- container start -->
+    <div class="container">
+
+        <!-- row start -->
+        <div class="row">
+            <div class="col-xl-7 col-lg-9">
+                <div class="section-title section-title-medium md-center slide-left delay-1">
+                    <h3 class="text-additional subtitle" style="color: #28334e">Nossos Serviços</h3>
+                    @*<h2 class="">serviços</h2>*@
+                    <p class="section-text text-black">
+                        A TATICCA presta serviços de auditoria externa e interna, impostos, consultoria e assessoria empresarial, corporate finance, treinamentos, tecnologia, perícia e investigações, sustentabilidade, mapeamento de riscos e serviços correlatos.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- row end -->
+        <!-- card-group start -->
+        <div class="card-group">
+            <!-- row start -->
+            <div class="row justify-content-center">
+
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <div class="icon fa fa-calculator"></div>
+                            </div>
+                            <h3 class="card-title">AUDIT</h3>
+                            <p class="card-text text-black">
+                                At lectus urna duis convallis convallis tellus.
+                                Ornare ut sem nulla pharetra diam sit amet.
+                            </p>
+                            <a href="~/Servico/AuditoriaInternaEExterna" class="card-btn text-black">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-1">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <div class="icon fa fa-object-group"></div>
+                            </div>
+                            <h3 class="card-title">
+                                CORPORATE FINANCE
+                            </h3>
+                            <p class="card-text text-black">
+                                Viverra aliquet eget sit amet tellus. Facilisis sit amet massa.
+                                Ac orci phasellus rutrum tellus.
+                            </p>
+                            <a href="~/Servico/CORPORATEFINANCE" class="card-btn text-black">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-2">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <div class="icon fa fa-fire"></div>
+                            </div>
+                            <h3 class="card-title">
+                                STRATEGY &
+                                OPERATIONS ADVISORY
+                            </h3>
+                            <p class="card-text text-black">
+                                Ac orci phasellus egestas tellus rutrum tellus.
+                                Pellentesque habitant morbi tristique.
+                            </p>
+                            <a href="~/Servico/STRATEGYOPERATIONSADVISORY" class="card-btn text-black">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
+                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-1">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <i class="fa fa-edit"></i>
+                            </div>
+                            <h3 class="card-title">TAX</h3>
+                            <p class="card-text text-black">
+                                Pellentesque senectus et netus et malesuada.
+                                Fringilla phasellus faucibus scelerisque.
+                            </p>
+                            <a href="~/Servico/TAX" class="card-btn text-black">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
+                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-2">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <i class="fa fa-lightbulb-o"></i>
+                            </div>
+                            <h3 class="card-title">
+                                RISK ADVISORY
+                            </h3>
+                            <p class="card-text text-black">
+                                Ornare arcu odio ut pharetra diam sit amet.
+                                At lectus urna duis convallis convallis tellus.
+                            </p>
+                            <a href="~/Servico/RISKADVISORY" class="card-btn text-black">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
+                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-3">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <i class="fa fa-archive"></i>
+                            </div>
+                            <h3 class="card-title">OUTSOURCING</h3>
+                            <p class="card-text text-black">
+                                At quis risus sed vulputate odio ut enim blandit volutpat.
+                                Sed tincidunt ornare massa.
+                            </p>
+                            <a href="~/Servico/Outsourcing" class="card-btn text-black">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 col-sm-8 mt-30">
+                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up delay-3">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <i class="fa fa-laptop"></i>
+                            </div>
+                            <h3 class="card-title">TECHNOLOGY</h3>
+                            <p class="card-text text-black">
+                                At quis risus sed vulputate odio ut enim blandit volutpat.
+                                Sed tincidunt ornare massa.
+                            </p>
+                            <a href="~/Servico/Technology" class="card-btn text-black">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="card bg-gray card-large card-hover-btn cursor-color slide-up">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <div class="icon fa fa-university"></div>
+                            </div>
+                            <h3 class="card-title">TRAINING</h3>
+                            <p class="card-text text-black">
+                                At lectus urna duis convallis convallis tellus.
+                                Ornare ut sem nulla pharetra diam sit amet.
+                            </p>
+                            <a href="~/Servico/Trining" class="card-btn text-black">
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+            <!-- row end -->
+        </div>
+        <!-- card-group end -->
+
+    </div>
+    <!-- container end -->
+</section>
+<!-- section end serviços -->
+<!-- section start -->
+<div>
+        <div class="bg-image lazy" data-bg="url(/img/video/capavideo.jpg)" style="width:100%; height:100%">
+            <!-- video start -->
+            <div class="video">
+                <button class="video-link text-white">
+                    <i class="icon fa fa-play"></i>
+                </button>
+                <div class="video-inner">
+                    <iframe src="https://www.youtube.com/embed/mnAsr58InQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- video end -->
+        </div>
+    </div>
+<!-- section end -->
+<!-- section start sobre nós -->
+<section class="intro section-large section-80vh bg-light">
+    <!-- container start -->
+    <div class="container">
+
+        <!-- row start -->
+        <div class="row">
+
+            <div class="col-lg-10">
+                <div class="section-title section-title-large slide-left">
+                    <h3 class="text-additional subtitle" style="color: #28334e">Sobre Nós</h3>
+                </div>
+
+                <p class="text-lead text-black slide-left delay-1">
+                    Nossa equipe é altamente qualificada e está preparada para assessorar sua empresa com qualquer desafio esteja ele relacionado a área contábil, financeira, tributária, fiscal, pericial ou tecnologia.
+                </p>
+
+                <div class="row slide-left delay-2">
+                    <div class="col-lg-6 col-md-6">
+                        <p class="intro-text text-black">
+                            Nossas empresas e profissionais possuem certificações e registros em todos os órgãos profissionais para reforçar nosso compromisso de prestar serviços de alta qualidade.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <p class="intro-text text-black">
+                            Nossa equipe qualificada e experiente, além de possuir mais de 20 anos de experiência de atuação, possui mestres formados no Brasil e no exterior.
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- row end -->
+
+    </div>
+    <!-- container end -->
+</section>
+<!-- section end sobre nós -->
+<!-- section start escritórios -->
+<section id="escritorios" class="section-large bg-black" style="background-image:url('/img/Background/3.jpg'); background-size:cover">
+    <!-- container start -->
+    <div class="container">
+
+        <!-- row start -->
+        <div class="row">
+            <div class="col-xl-8 col-lg-9">
+                <div class="section-title section-title-medium">
+                    <p class="text-additional subtitle slide-left" style="color:white">Encontre Nossos Escritórios</p>
+                    @*<h2 class="text-white slide-left">
+
+                        </h2>*@
+                    <p class="section-text text-white slide-left delay-1">
+                        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- row end -->
+
+    </div>
+    <!-- container end -->
+    <!-- portfolio start -->
+    <div class="portfolio">
+        <!-- container start -->
+        <div class="container">
+
+            <!-- row start -->
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="portfolio-item" data-swup href="/contato">
+                        <div class="portfolio-img cover-down delay-2">
+                            <div class="bg-image lazy" data-bg="url(/img/escritorios/saopaulo.jpg)" style="width: 210px; height: 100px;"></div>
+                        </div>
+                        <div class="portfolio-info slide-left delay-1">
+                            <span class="text-additional">
+                                Brooklin Novo
+                            </span>
+                            <h2 class="text-white">São Paulo</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a class="portfolio-item" data-swup href="/contato">
+                        <div class="portfolio-img cover-down delay-2">
+                            <div class="bg-image lazy" data-bg="url(/img/escritorios/curitiba.jpg)" style="width: 210px; height: 100px"></div>
+                        </div>
+                        <div class="portfolio-info slide-left delay-1">
+                            <span class="text-additional">Agua Verde</span>
+                            <h2 class="text-white">Curitiba</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a class="portfolio-item" data-swup href="/contato">
+                        <div class="portfolio-img cover-down delay-2">
+                            <div class="bg-image lazy" data-bg="url(/img/escritorios/portoalegre.jpg)"></div>
+                        </div>
+                        <div class="portfolio-info slide-left delay-1">
+                            <span class="text-additional">Bairro Auxiliadora</span>
+                            <h2 class="text-white">Porto Alegre</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a class="portfolio-item" data-swup href="/contato">
+                        <div class="portfolio-img cover-down delay-2">
+                            <div class="bg-image lazy" data-bg="url(/img/escritorios/Blumenau.jpg)"></div>
+                        </div>
+                        <div class="portfolio-info slide-left delay-1">
+                            <span class="text-additional">Centro</span>
+                            <h2 class="text-white">Blumenau</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- row end -->
+            <!-- row start -->
+
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="portfolio-item" data-swup href="/contato">
+                        <div class="portfolio-img cover-down delay-2">
+                            <div class="bg-image lazy" data-bg="url(/img/escritorios/belohorizonte.jpg)"></div>
+                        </div>
+                        <div class="portfolio-info slide-left delay-1">
+                            <span class="text-additional">Savassi</span>
+                            <h2 class="text-white">Belo Horizonte</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="portfolio-item" data-swup href="/contato">
+                        <div class="portfolio-img cover-down delay-2">
+                            <div class="bg-image lazy" data-bg="url(/img/escritorios/brasilia.jpg)"></div>
+                        </div>
+                        <div class="portfolio-info slide-left delay-1">
+                            <span class="text-additional">Asa Norte</span>
+                            <h2 class="text-white">Brasília</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a class="portfolio-item" data-swup href="/contato">
+                        <div class="portfolio-img cover-down delay-2">
+                            <div class="bg-image lazy" data-bg="url(/img/escritorios/riodejaneiro.jpg)"></div>
+                        </div>
+                        <div class="portfolio-info slide-left delay-1">
+                            <span class="text-additional">Botafogo</span>
+                            <h2 class="text-white">Rio de Janeiro</h2>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <!-- row end -->
+            <!-- row start -->
+            <!-- row end -->
+        </div>
+        <!-- container end -->
+    </div>
+    <!-- portfolio end -->
+</section>
+<!-- section end escritórios -->
+<!-- section start clientes-->
+<section class="section-large bg-light">
+    <!-- container start clientes-->
+    <div class="container">
+
+        <!-- row start -->
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="section-title section-title-large text-center slide-up">
+                    <h3 class="text-additional subtitle" style="color: #28334e">Nossos Clientes</h3>
+                    @*<h2>Clientes</h2>*@
+                </div>
+            </div>
+        </div>
+        <!-- row end -->
+        <!-- row start -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <!-- clients start -->
+                <div class="clients">
+
+                    <div class="slide-up delay-1">
+                        <a href="/#" class="clients-item">
+                            <img src="~/img/Clients/1.png" alt="Client">
+                        </a>
+                    </div>
+
+                    <div class="slide-up delay-2">
+                        <a href="/#" class="clients-item">
+                            <img src="~/img/Clients/2.png" alt="Client">
+                        </a>
+                    </div>
+
+                    <div class="slide-up delay-3">
+                        <a href="/#" class="clients-item">
+                            <img src="~/img/Clients/3.png" alt="Client">
+                        </a>
+                    </div>
+
+                    <div class="slide-up delay-1">
+                        <a href="/#" class="clients-item">
+                            <img src="~/img/Clients/4.png" alt="Client">
+                        </a>
+                    </div>
+
+                    <div class="slide-up delay-2">
+                        <a href="/#" class="clients-item">
+                            <img src="~/img/Clients/2.png" alt="Client">
+                        </a>
+                    </div>
+
+                    <div class="slide-up delay-3">
+                        <a href="/#" class="clients-item">
+                            <img src="~/img/Clients/4.png" alt="Client">
+                        </a>
+                    </div>
+
+                    <div class="slide-up delay-1">
+                        <a href="/#" class="clients-item">
+                            <img src="~/img/Clients/3.png" alt="Client">
+                        </a>
+                    </div>
+
+                    <div class="slide-up delay-2">
+                        <a href="/#" class="clients-item">
+                            <img src="~/img/Clients/1.png" alt="Client">
+                        </a>
+                    </div>
+
+                    <div class="slide-up delay-3">
+                        <a href="/#" class="clients-item">
+                            <img src="~/img/Clients/2.png" alt="Client">
+                        </a>
+                    </div>
+
+                </div>
+                <!-- clients end -->
+            </div>
+        </div>
+        <!-- row end -->
+
+    </div>
+    <!-- container end -->
+</section>
+<!-- section end clientes-->
+<!-- section start blog -->
+<section class="section-large bg-light">
+    <!-- container start -->
+    <div class="container">
+
+        <!-- row start -->
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="section-title section-title-small text-center slide-up">
+                    <p class="text-additional subtitle">blog</p>
+                    <h2>Últimas Publicações</h2>
+                </div>
+            </div>
+        </div>
+        <!-- row end -->
+        <!-- card-group start -->
+        <div class="card-group">
+            <!-- row start -->
+            <div class="row justify-content-center">
+
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="blog-card-outer slide-up">
+                        <div class="blog-card bg-black">
+                            <a data-swup href="blogArticle.html" class="blog-card-img cursor-color">
+                                <div class="bg-image lazy" data-bg="url(/img/Blog/1.jpg)"></div>
+                            </a>
+                            <div class="blog-card-content">
+                                <a class="blog-card-tag link text-additional" href="/#">Development</a>
+                                <a class="blog-card-tag link text-additional" href="/#">Web design</a>
+                                <h3 class="blog-card-title text-white">
+                                    <a class="link" data-swup href="blogArticle.html">
+                                        5 innovative approaches to improve your development
+                                    </a>
+                                </h3>
+                                <p class="blog-card-text text-light-gray">
+                                    Amet luctus lectus magna fringilla urna.
+                                    Nulla facilisi nullam vehicula ipsum a arcu congue...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="blog-card-outer slide-up delay-1">
+                        <div class="blog-card bg-black">
+                            <a data-swup href="blogArticle.html" class="blog-card-img cursor-color">
+                                <div class="bg-image lazy" data-bg="url(/img/Blog/2.jpg)"></div>
+                            </a>
+                            <div class="blog-card-content">
+                                <a class="blog-card-tag link text-additional" href="/#">UX / UI</a>
+                                <a class="blog-card-tag link text-additional" href="/#">Design</a>
+                                <h3 class="blog-card-title text-white">
+                                    <a class="link" data-swup href="blogArticle.html">
+                                        Seven features of design that make everyone love it
+                                    </a>
+                                </h3>
+                                <p class="blog-card-text text-light-gray">
+                                    Egestas sed sed risus pretium quam suspendisse in.
+                                    Cursus vitae congue mauris rhoncus...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="blog-card-outer slide-up delay-2">
+                        <div class="blog-card bg-black">
+                            <a data-swup href="blogArticle.html" class="blog-card-img cursor-color">
+                                <div class="bg-image lazy" data-bg="url(/img/Blog/3.jpg)"></div>
+                            </a>
+                            <div class="blog-card-content">
+                                <a class="blog-card-tag link text-additional" href="/#">Product design</a>
+                                <h3 class="blog-card-title text-white">
+                                    <a class="link" data-swup href="blogArticle.html">
+                                        How Product Design is different than UX Design
+                                    </a>
+                                </h3>
+                                <p class="blog-card-text text-light-gray">
+                                    Cursus vitae congue mauris rhoncus.
+                                    Suspendisse risus quis varius quam quisque id diam vel...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- row end -->
+        </div>
+        <!-- card-group end -->
+
+    </div>
+    <!-- container end -->
+</section>
+<!-- section end blog-->
