@@ -17,13 +17,42 @@
     <script src="~/Scripts/runtime.js"></script>
     <script src="~/Scripts/shared.js"></script>
     <script src="~/Scripts/app.js"></script>
-
     <script>
+        var posicaoantiga = undefined;
         $(function () {
             $('.fp-tableCell').attr('style', 'height:' + $(window).height() + 'px');
+            verificposicao();
         })
-    </script>
 
+        function verificposicao() {
+            var posicaoatual = $('.hero-with-partnership-mark.active').attr('data-color');
+
+            //verifica se a posição do banner mudou
+            if (posicaoantiga != posicaoatual) {
+                //altera para logo original
+                if (posicaoatual == undefined || posicaoatual == 'original') {
+                    $('#logotaticca').attr('src', '/img/logo/logo.fw.png');
+                }
+
+                //altera para logo branco
+                if (posicaoatual == 'white') {
+                    $('#logotaticca').attr('src', '/img/logo/branco.fw.png');
+                }
+
+                //altera para logo azul
+                if (posicaoatual == 'blue') {
+                    $('#logotaticca').attr('src', '/img/logo/azul.fw.png');
+                }
+            }
+
+            posicaoantiga = $('.hero-with-partnership-mark.active').attr('data-color');
+            console.log($('.hero-with-partnership-mark.active').attr('data-color'));
+
+            setTimeout(function () {
+                verificposicao();
+            }, 100); //delay da transição = 1000 milisegundos para verificar posição e mudar logo
+        }
+    </script>
     <!-- essencial remote version
     <script src="https://www.mckinsey.com/redesign/resources/js/runtime.95216eeb571c3c1eff92.js"></script>
     <script src="https://www.mckinsey.com/redesign/resources/js/shared.part.19b7d29ebfbf9d90a993.js"></script>
@@ -108,7 +137,7 @@
 
     <div class="section-wrapper fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; top: -331px;">
 
-        <div class="hero-with-partnership-mark section -bg-white text-right vertical-centered fp-auto-height-responsive fp-section fp-table active" data-module="HeroWithPartnershipMark" data-fp-styles="height: 331px;" style="height: 331px;">
+        <div data-color="original" class="hero-with-partnership-mark section -bg-white text-right vertical-centered fp-auto-height-responsive fp-section fp-table active" data-module="HeroWithPartnershipMark" data-fp-styles="height: 331px;" style="height: 331px;">
             <div class="fp-tableCell" style="height: 331px;">
 
                 <div class="bg" style="
@@ -187,7 +216,7 @@
             </div>
         </div>
 
-        <div class="hero-with-partnership-mark section -bg-dark-blue-gradient text-left vertical-top fp-auto-height-responsive fp-section fp-table fp-completely" data-module="HeroWithPartnershipMark" data-fp-styles="height: 331px;" style="height: 331px;">
+        <div data-color="white" class="hero-with-partnership-mark section -bg-dark-blue-gradient text-left vertical-top fp-auto-height-responsive fp-section fp-table fp-completely" data-module="HeroWithPartnershipMark" data-fp-styles="height: 331px;" style="height: 331px;">
             <div class="fp-tableCell" style="height: 331px;">
 
                 <div class="bg" style="
@@ -266,7 +295,7 @@
             </div>
         </div>
 
-        <div class="hero-with-partnership-mark section -bg-dark-blue-gradient text-right vertical-low fp-auto-height-responsive fp-section fp-table" data-module="HeroWithPartnershipMark" data-fp-styles="height: 331px;" style="height: 331px;">
+        <div data-color="blue" class="hero-with-partnership-mark section -bg-dark-blue-gradient text-right vertical-low fp-auto-height-responsive fp-section fp-table" data-module="HeroWithPartnershipMark" data-fp-styles="height: 331px;" style="height: 331px;">
             <div class="fp-tableCell" style="height: 331px;">
 
                 <div class="bg" style="

@@ -221,6 +221,13 @@
     <Content Include="img\equipe\regina.jpg" />
     <Content Include="img\equipe\renato.jpg" />
     <Content Include="img\equipe\ricardo.jpg" />
+    <Content Include="img\Escritorios2\belohorizonte.jpg" />
+    <Content Include="img\Escritorios2\blumenau.jpg" />
+    <Content Include="img\Escritorios2\brasilia.jpg" />
+    <Content Include="img\Escritorios2\curitiba.JPG" />
+    <Content Include="img\Escritorios2\portoalegre.jpg" />
+    <Content Include="img\Escritorios2\riodejaneiro.jpg" />
+    <Content Include="img\Escritorios2\saopaulo.jpg" />
     <Content Include="img\Escritorios\belohorizonte.jpg" />
     <Content Include="img\Escritorios\blumenau.jpg" />
     <Content Include="img\Escritorios\brasilia.jpg" />
@@ -228,9 +235,11 @@
     <Content Include="img\Escritorios\portoalegre.jpg" />
     <Content Include="img\Escritorios\riodejaneiro.jpg" />
     <Content Include="img\Escritorios\saopaulo.jpg" />
+    <Content Include="img\logo\azul.fw.png" />
     <Content Include="img\logo\branco.fw.png" />
     <Content Include="img\logo\IGNIS.png" />
     <Content Include="img\logo\logo.fw.png" />
+    <Content Include="img\logo\taticca-branco.png" />
     <Content Include="img\map.svg" />
     <Content Include="img\Slider\1.jpg" />
     <Content Include="img\Slider\3.jpg" />
@@ -409,6 +418,7 @@
     <Content Include="packages\FontAwesome.4.7.0\Content\Content\font-awesome.css" />
     <Content Include="packages\FontAwesome.4.7.0\Content\Content\font-awesome.min.css" />
     <Content Include="packages\FontAwesome.4.7.0\Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="img\Escritorios2\Escritorios.rar" />
     <None Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2.js" />
     <Content Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2.min.js" />
@@ -1865,6 +1875,7 @@
     <Content Include="packages\WebGrease.1.5.2\tools\WG.exe" />
     <Content Include="packages\WebGrease.1.6.0\lib\WebGrease.dll" />
     <Content Include="packages\WebGrease.1.6.0\tools\WG.EXE" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -3039,6 +3050,10 @@
     <Content Include="Scripts\plugins.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\runtime.js" />
+    <Content Include="Scripts\SectionalScroll.js" />
+    <Content Include="Scripts\shared.js" />
+    <Content Include="Scripts\vendor-gsap.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

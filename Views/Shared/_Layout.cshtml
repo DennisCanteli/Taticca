@@ -39,6 +39,13 @@
             float: left;
         }
 
+        div.menu {
+            position: fixed;
+        }
+
+        .header-white .menu span {
+            background-color: black; /*cor do menu*/
+        }
     </style>
     @RenderSection("css", required: false)
 
@@ -74,16 +81,16 @@
             <!-- menu-icon start -->
             <div class="menu-outer-wrap">
                 <div class="menu-wrap ">
-                    <div class="menu menu-hover click-target pull-left" style="color:blue;">
+                    <div class="menu menu-hover click-target pull-left" style="color:white;">
                         <span class="menu-line-1"></span>
                         <span class="menu-line-2"></span>
                         <span class="menu-line-3"></span>
                     </div>
                 </div>
             </div>
-            <div class="logo-box pull-left" style="left: 101px; margin-top: 1px; position: absolute;">
+            <div class="logo-box pull-left" style="left: 90px; margin-top: 8px; position: absolute;">
                 <a data-swup href="/" class="logo">
-                    <img src="~/img/logo/logo.fw.png" alt="logo"  style="width: 250px;">
+                    <img src="~/img/logo/logo.fw.png" alt="logo"  id="logotaticca">
                 </a>
             </div>
             <!-- menu-icon end -->
@@ -106,20 +113,21 @@
             <!-- menu-background end -->
             <!-- menu-inner start -->
             <div class="menu-inner">
+                <div class="menu-header" style="margin-top:30px; width:200px; margin-left: 84px;">
+                    <img src="~/img/logo/branco.fw.png" />
+                </div>
                 <!-- menu-container start -->
                 <div class="menu-container">
 
                     <!-- menu-header start -->
-                    <div class="menu-header" style="margin-top:35px">
-                        <h4>Navegação</h4>
-                    </div>
+                   
                     <!-- menu-header end -->
 
-                    <div class="row">
+                    <div class="row" style="margin-top:42px;">
                         <!-- navigation start -->
                         <nav class="navigation col-md-12" id="principalmenu">
                             <ul class="navigation-list">
-                                                               <li class="navigation-item">
+                                <li class="navigation-item">
                                     <a class="nav-link suy">
                                         Sobre Nós
                                         <i class="fa fa-arrow-right"></i>
@@ -316,8 +324,67 @@
                                 <li class="navigation-item">
                                     <a class="nav-link suy" data-swup href="/Contato">Carreira na TATICCA</a>
                                 </li>
+
                                 <li class="navigation-item">
-                                    <a class="nav-link suy" data-swup href="/Contato">Encontre nossos escritórios </a>
+                                    <a class="nav-link suy">
+                                        Encontre nossos escritórios
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+
+                                    <div class="subnav">
+                                        <ul class="subnav-list">
+                                            <li class="subnav-item">
+                                                <a class="subnav-title">
+                                                    <i class="fa fa-arrow-left"></i>
+
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
+                                                    <img src="~/img/Escritorios/saopaulo.jpg" />
+                                                    São Paulo
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
+                                                    <img src="~/img/Escritorios/curitiba.jpg" />
+                                                    Curitiba
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
+                                                    <img src="~/img/Escritorios/portoalegre.jpg" />
+                                                    Porto Alegre
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
+                                                    <img src="~/img/Escritorios/blumenau.jpg" />
+                                                    Blumenau
+                                                </a>
+                                            </li>
+
+
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
+                                                    <img src="~/img/Escritorios/belohorizonte.jpg" />
+                                                    Belo Horizonte
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
+                                                    <img src="~/img/Escritorios/brasilia.jpg" />
+                                                    Brasília
+                                                </a>
+                                            </li>
+                                            <li class="subnav-item">
+                                                <a data-swup href="/equipe">
+                                                    <img src="~/img/Escritorios/riodejaneiro.jpg" />
+                                                    Rio de Janeiro
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li class="navigation-item">
                                     <a class="nav-link suy" data-swup href="/Contato">Solicite sua proposta </a>
@@ -342,7 +409,6 @@
                         </div>
                     </div>
                     <!-- social start -->
-                   
                     <!-- social end -->
 
                 </div>
@@ -356,37 +422,73 @@
     </main>
     <!-- main end -->
     <!-- footer start -->
-    <footer class="footer bg-black">
+    <footer class="footer bg-black" style="color:#64676b";>
         <div class="container">
-            <div class="row justify-content-md-between justify-content-sm-center">
+            <div class="row justify-content-md-between justify-content-sm-center" style="margin-bottom: 10px; color:white">
 
-                <div class="col-lg-4 col-md-6 col-sm-10">
-                    <div class="footer-item text-md-left text-center">
-                        <a data-swup href="/" class="logo slide-up">
-                            <img src="~/img/logo/branco.fw.png" alt="logo" width="100%">
-                        </a>
-                        <div class="footer-content">
-                            <p class="footer-text text-light-gray slide-up delay-1">
-                                Feugiat nibh sed pulvinar proin gravida lectus.
-                                In est ante in nibh. Vitae congue mauris rhoncus vel elit. Lectus mauris ultrices eros in cursus.
-                            </p>
-                        </div>
+                <div class="col-md-3 col-sm-10">
+                    <div>
+                        <h3 class="footer-title text-white slide-up" style="font-size: 19px;">SERVIÇOS</h3>
+                        <ul class="footer-content">
+                            <li style="list-style-type: none;"><hr style="height:2px; border:none; color:white; background-color:white; margin-top: 0px; margin-bottom: 0px;" /></li>
+
+                            <li>Auditoria externa</li>
+                            <li>Consultoria empresarial</li>
+                            <li>Corporate finance</li>
+                            <li>Contabilidade</li>
+                            <li>Impostos</li>
+                            <li>Tecnologia</li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-sm-10">
-                    <div class="footer-item text-md-right text-center">
-                        <h3 class="footer-title text-white slide-up">Contatos</h3>
+                <div class="col-md-3 col-sm-10">
+                    <div>
+                        <h3 class="footer-title text-white slide-up" style="font-size: 19px;">SETORES DE ATUAÇÃO</h3>
                         <ul class="footer-content">
-                            <li class="text-light-gray slide-up delay-1">taticca@taticca.com.br</li>
-                            <li class="text-light-gray slide-up delay-1">+ 55 11 3062 3000</li>
-                            <li class="text-light-gray slide-up delay-1">
-                                1910 Gateway Road, Portland, Oregon 97230
-                            </li>
+                            <li style="list-style-type: none;"><hr style="height:2px; border:none; color:white; background-color:white; margin-top: 0px; margin-bottom: 0px;" /></li>
+
+                            <li>Agronegócios</li>
+                            <li>Bens de consumo </li>
+                            <li>Corporate finance</li>
+                            <li>Contabilidade</li>
+                            <li>Impostos</li>
+                            <li>Tecnologia</li>
                         </ul>
                     </div>
                 </div>
 
+                <div class="col-md-3 col-sm-10">
+                    <div>
+                        <h3 class="footer-title text-white slide-up" style="font-size: 19px;">SERVIÇOS</h3>
+                        <ul class="footer-content">
+                            <li style="list-style-type: none;"><hr style="height:2px; border:none; color:white; background-color:white; margin-top: 0px; margin-bottom: 0px;" /></li>
+
+                            <li>Auditoria externa</li>
+                            <li>Consultoria empresarial</li>
+                            <li>Corporate finance</li>
+                            <li>Contabilidade</li>
+                            <li>Impostos</li>
+                            <li>Tecnologia</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-sm-10">
+                    <div>
+                        <h3 class="footer-title text-white slide-up" style="font-size: 19px;">SERVIÇOS</h3>
+                        <ul class="footer-content">
+                            <li style="list-style-type: none;"><hr style="height:2px; border:none; color:white; background-color:white; margin-top: 0px; margin-bottom: 0px;" /></li>
+
+                            <li>Auditoria externa</li>
+                            <li>Consultoria empresarial</li>
+                            <li>Corporate finance</li>
+                            <li>Contabilidade</li>
+                            <li>Impostos</li>
+                            <li>Tecnologia</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
 
